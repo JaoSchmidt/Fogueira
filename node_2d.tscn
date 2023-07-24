@@ -1,34 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgv8wc1ikc084"]
+[gd_scene load_steps=6 format=3 uid="uid://cgv8wc1ikc084"]
 
-[ext_resource type="Texture2D" uid="uid://b0al47fvtmxdk" path="res://Cenário 1.png" id="1_fiy8g"]
-[ext_resource type="Texture2D" uid="uid://ichjdlw3ir2x" path="res://Poster 1.png" id="2_1pmdx"]
-[ext_resource type="Script" path="res://poster.gd" id="2_etlak"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhbuk"]
-size = Vector2(161, 180)
+[ext_resource type="Script" path="res://node_2d.gd" id="1_lkydj"]
+[ext_resource type="PackedScene" uid="uid://bev73wi0l466q" path="res://quarto1.tscn" id="1_pel1v"]
+[ext_resource type="Texture2D" uid="uid://cx318umsls0i4" path="res://art/Cenário 1.png" id="3_m3cvc"]
+[ext_resource type="Texture2D" uid="uid://dg237mjskfwcs" path="res://art/Cenario_2.png" id="4_dip5b"]
+[ext_resource type="Texture2D" uid="uid://bf887wu02fula" path="res://art/Cenario_3.png" id="5_1rudw"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_lkydj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-6, 18)
 scale = Vector2(0.6, 0.6)
-zoom = Vector2(0.6, 0.6)
+anchor_mode = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-4, 20)
-texture = ExtResource("1_fiy8g")
+[node name="Bedroom_ang1" parent="." instance=ExtResource("1_pel1v")]
+texture = ExtResource("3_m3cvc")
 
-[node name="Area2D" type="Area2D" parent="."]
-visible = false
-script = ExtResource("2_etlak")
+[node name="Bedroom_ang2" parent="." instance=ExtResource("1_pel1v")]
+texture = ExtResource("4_dip5b")
 
-[node name="Poster" type="Sprite2D" parent="Area2D"]
-position = Vector2(101, -128)
-rotation = -0.486947
-scale = Vector2(0.302315, 0.259635)
-texture = ExtResource("2_1pmdx")
+[node name="Bedroom_ang3" parent="." instance=ExtResource("1_pel1v")]
+texture = ExtResource("5_1rudw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(86, -155)
-rotation = -0.0436332
-shape = SubResource("RectangleShape2D_xhbuk")
+[node name="RightTextureButton" type="TextureButton" parent="."]
+offset_left = 1184.0
+offset_right = 1360.0
+offset_bottom = 768.0
+
+[node name="LeftTextureButton" type="TextureButton" parent="."]
+offset_right = 176.0
+offset_bottom = 768.0
+
+[connection signal="pressed" from="RightTextureButton" to="." method="_on_right_texture_button_pressed"]
+[connection signal="pressed" from="LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
