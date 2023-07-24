@@ -1,26 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://bev73wi0l466q"]
-
-[ext_resource type="Script" path="res://poster.gd" id="2_cul56"]
-[ext_resource type="Texture2D" uid="uid://cd476lbg4x5s4" path="res://art/Poster_1.png" id="2_wdpmr"]
+[gd_scene format=3 uid="uid://bev73wi0l466q"]
 
 [node name="Bedroom_ang" type="Sprite2D"]
 scale = Vector2(0.711111, 0.711111)
 centered = false
-
-[node name="Area2D" type="Area2D" parent="."]
-collision_mask = 0
-script = ExtResource("2_cul56")
-
-[node name="Poster" type="Sprite2D" parent="Area2D"]
-position = Vector2(101.25, -157.5)
-rotation = -0.486947
-scale = Vector2(0.302315, 0.259635)
-texture = ExtResource("2_wdpmr")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-position = Vector2(86.1545, -153.643)
-rotation = 0.0767945
-scale = Vector2(1.05319, 1.02189)
-polygon = PackedVector2Array(-63.852, -96.6362, 91.4576, -131.153, 48.3198, 41.415, -74.2025, 62.1258)
-
-[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
