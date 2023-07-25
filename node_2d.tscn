@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgv8wc1ikc084"]
+[gd_scene load_steps=6 format=3 uid="uid://cgv8wc1ikc084"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_lkydj"]
 [ext_resource type="PackedScene" uid="uid://bev73wi0l466q" path="res://quarto1.tscn" id="1_pel1v"]
-[ext_resource type="Texture2D" uid="uid://cx318umsls0i4" path="res://art/Cenário 1.png" id="3_m3cvc"]
 [ext_resource type="Texture2D" uid="uid://dg237mjskfwcs" path="res://art/Cenario_2.png" id="4_dip5b"]
 [ext_resource type="PackedScene" uid="uid://havx56pqb2w6" path="res://zoom_area.tscn" id="4_esrj5"]
 [ext_resource type="Texture2D" uid="uid://bf887wu02fula" path="res://art/Cenario_3.png" id="5_1rudw"]
@@ -15,7 +14,6 @@ scale = Vector2(0.6, 0.6)
 anchor_mode = 0
 
 [node name="Bedroom_ang1" parent="." instance=ExtResource("1_pel1v")]
-texture = ExtResource("3_m3cvc")
 
 [node name="ZoomArea2D" parent="Bedroom_ang1" instance=ExtResource("4_esrj5")]
 position = Vector2(1361.25, 585)
