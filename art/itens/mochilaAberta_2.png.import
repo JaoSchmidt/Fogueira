@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpcv3qksr37a6"
-path="res://.godot/imported/Cenario_1.png-2db0c45e3833f18f373974039b66a8e0.ctex"
+uid="uid://bqhayn784hy5h"
+path="res://.godot/imported/mochilaAberta_2.png-0739b1ac30377d6ee0850eea03408b3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Cenario_1.png"
-dest_files=["res://.godot/imported/Cenario_1.png-2db0c45e3833f18f373974039b66a8e0.ctex"]
+source_file="res://art/itens/mochilaAberta_2.png"
+dest_files=["res://.godot/imported/mochilaAberta_2.png-0739b1ac30377d6ee0850eea03408b3b.ctex"]
 
 [params]
 

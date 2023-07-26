@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg237mjskfwcs"
-path="res://.godot/imported/Cenario_2.png-9c2520d679eb3c4005bcc95057e085ca.ctex"
+uid="uid://sa05xbeo7osy"
+path="res://.godot/imported/Monstro1.png-b272efff9d291e804185c2933e5884a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Cenario_2.png"
-dest_files=["res://.godot/imported/Cenario_2.png-9c2520d679eb3c4005bcc95057e085ca.ctex"]
+source_file="res://art/cenario/Monstro1.png"
+dest_files=["res://.godot/imported/Monstro1.png-b272efff9d291e804185c2933e5884a6.ctex"]
 
 [params]
 
