@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dld84n38v5jbi"
+path="res://.godot/imported/Tema Protagonista.mp3-cac2081303efa2bb6b88ff4b0ab82750.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Music/Tema Protagonista.mp3"
+dest_files=["res://.godot/imported/Tema Protagonista.mp3-cac2081303efa2bb6b88ff4b0ab82750.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

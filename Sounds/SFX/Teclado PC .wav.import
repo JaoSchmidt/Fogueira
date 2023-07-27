@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ojt2kxjls1ry"
+path="res://.godot/imported/Teclado PC .wav-9eea291a028175f1d16ca2268b1bc5c3.sample"
+
+[deps]
+
+source_file="res://Sounds/SFX/Teclado PC .wav"
+dest_files=["res://.godot/imported/Teclado PC .wav-9eea291a028175f1d16ca2268b1bc5c3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
