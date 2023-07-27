@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bquq8mex3dhki"
-path="res://.godot/imported/cenario_1.png-6c004a4a9747618289ba3f1239fc1a04.ctex"
+uid="uid://bhl3fxai60h72"
+path="res://.godot/imported/Richas senha.png-1ce201c620e97d0d8c657abb9fb42c94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cenario/cenario_1.png"
-dest_files=["res://.godot/imported/cenario_1.png-6c004a4a9747618289ba3f1239fc1a04.ctex"]
+source_file="res://Prototipos/Richas senha.png"
+dest_files=["res://.godot/imported/Richas senha.png-1ce201c620e97d0d8c657abb9fb42c94.ctex"]
 
 [params]
 

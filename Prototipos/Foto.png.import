@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bquq8mex3dhki"
-path="res://.godot/imported/cenario_1.png-6c004a4a9747618289ba3f1239fc1a04.ctex"
+uid="uid://bg1va47q0l16u"
+path="res://.godot/imported/Foto.png-22696c714b58f4c44bf09accb5747979.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cenario/cenario_1.png"
-dest_files=["res://.godot/imported/cenario_1.png-6c004a4a9747618289ba3f1239fc1a04.ctex"]
+source_file="res://Prototipos/Foto.png"
+dest_files=["res://.godot/imported/Foto.png-22696c714b58f4c44bf09accb5747979.ctex"]
 
 [params]
 

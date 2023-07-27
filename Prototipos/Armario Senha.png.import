@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bquq8mex3dhki"
-path="res://.godot/imported/cenario_1.png-6c004a4a9747618289ba3f1239fc1a04.ctex"
+uid="uid://clhqv7iu06k6l"
+path="res://.godot/imported/Armario Senha.png-718abf2474253a148e1148db03457347.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cenario/cenario_1.png"
-dest_files=["res://.godot/imported/cenario_1.png-6c004a4a9747618289ba3f1239fc1a04.ctex"]
+source_file="res://Prototipos/Armario Senha.png"
+dest_files=["res://.godot/imported/Armario Senha.png-718abf2474253a148e1148db03457347.ctex"]
 
 [params]
 
