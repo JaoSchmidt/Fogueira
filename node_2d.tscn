@@ -1,13 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://cgv8wc1ikc084"]
+[gd_scene load_steps=27 format=3 uid="uid://cgv8wc1ikc084"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_lkydj"]
-[ext_resource type="PackedScene" uid="uid://bev73wi0l466q" path="res://quarto1.tscn" id="1_pel1v"]
-[ext_resource type="Texture2D" uid="uid://c7oixr1gwctgk" path="res://art/cenario/cenario_1.png" id="3_gef6a"]
-[ext_resource type="Texture2D" uid="uid://cqobvpxex7uwx" path="res://art/itens/cobertorFechado_1.png" id="4_rwitn"]
-[ext_resource type="Texture2D" uid="uid://d7b7ge5mimsh" path="res://art/itens/cobertorAberto_1.png" id="5_ysxsx"]
-[ext_resource type="Texture2D" uid="uid://x7c3mpnkwebl" path="res://art/itens/cortinaFechada_1.png" id="6_p4dgq"]
-[ext_resource type="Texture2D" uid="uid://hdecqnuqw2uh" path="res://art/itens/cortinaAberta_1.png" id="7_1mevs"]
-[ext_resource type="Texture2D" uid="uid://cwfw0xenvtre1" path="res://art/itens/posters_1.png" id="8_xmwwd"]
+[ext_resource type="PackedScene" uid="uid://2mf2pyrq5a2q" path="res://quarto1.tscn" id="1_pel1v"]
+[ext_resource type="Texture2D" uid="uid://bquq8mex3dhki" path="res://art/cenario/cenario_1.png" id="3_gef6a"]
+[ext_resource type="PackedScene" uid="uid://ihwpqo00o44v" path="res://cobertor.tscn" id="4_86pwm"]
+[ext_resource type="PackedScene" uid="uid://d0vo15nm7cknt" path="res://cortina.tscn" id="5_cyoy3"]
+[ext_resource type="PackedScene" uid="uid://dfwop73gf4uk8" path="res://posters.tscn" id="6_kscdh"]
 [ext_resource type="Texture2D" uid="uid://deelibispwodp" path="res://art/itens/diario_1.png" id="9_yptno"]
 [ext_resource type="Texture2D" uid="uid://cr0s2cqf6r2rp" path="res://art/itens/desenho_2.png" id="10_x1xt8"]
 [ext_resource type="Texture2D" uid="uid://cn7ihw8knpews" path="res://art/itens/violino_2.png" id="11_3nfh0"]
@@ -20,13 +18,19 @@
 [ext_resource type="Texture2D" uid="uid://sa05xbeo7osy" path="res://art/cenario/Monstro1.png" id="18_fqeoo"]
 [ext_resource type="Texture2D" uid="uid://kb7w0ad1xwuy" path="res://art/cenario/Monstro2.png" id="19_xtuet"]
 [ext_resource type="Texture2D" uid="uid://ehff1ovq414j" path="res://art/cenario/Chuva.png" id="20_gcj7k"]
+[ext_resource type="Texture2D" uid="uid://cv6fmra22fwl3" path="res://Prototipos/Seta_Dir.png" id="21_524u1"]
 [ext_resource type="Texture2D" uid="uid://dx5bmkpff285q" path="res://art/cenario/Monstro3.png" id="21_wdsre"]
+[ext_resource type="Texture2D" uid="uid://bmq5wusioq0uc" path="res://Prototipos/Seta_esq.png" id="22_am001"]
 [ext_resource type="Texture2D" uid="uid://56imwqv8vxf7" path="res://art/cenario/Vidro.png" id="22_vxcej"]
+[ext_resource type="Texture2D" uid="uid://bfnbtdy3hmmgt" path="res://Prototipos/Sair.png" id="23_00nc7"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qofkl"]
 load_path = "res://.godot/imported/cenario_2.png-91bac667c11abc4e0077042eee2db91f.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rsyrb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yr4tl"]
+font_size = 30
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_lkydj")
@@ -51,57 +55,13 @@ polygon = PackedVector2Array(371, 697, 503, 565, 429, 483, 243, 605)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/Bed"]
 polygon = PackedVector2Array(207, 735, 470, 520, 1157, 654, 1162, 813, 926, 1058, 609, 990, 460, 797)
 
-[node name="ClosedBlanket" type="Area2D" parent="Bedroom_ang1"]
+[node name="Cobertor" parent="Bedroom_ang1" instance=ExtResource("4_86pwm")]
+position = Vector2(420, 850)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/ClosedBlanket"]
-position = Vector2(421, 849)
-polygon = PackedVector2Array(-98, -46, -119, 108, 23, 164, 56, -16)
+[node name="Cortina" parent="Bedroom_ang1" instance=ExtResource("5_cyoy3")]
+position = Vector2(24, 2)
 
-[node name="CobertorFechado1" type="Sprite2D" parent="Bedroom_ang1/ClosedBlanket"]
-position = Vector2(421, 849)
-texture = ExtResource("4_rwitn")
-
-[node name="OpenBlanket" type="Area2D" parent="Bedroom_ang1"]
-visible = false
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/OpenBlanket"]
-position = Vector2(471, 853)
-polygon = PackedVector2Array(-130, -48, -19, 139, -24, 198, 6, 212, 19, 120, -34, -38)
-
-[node name="CobertorAberto1" type="Sprite2D" parent="Bedroom_ang1/OpenBlanket"]
-position = Vector2(471, 853)
-texture = ExtResource("5_ysxsx")
-
-[node name="OpenCurtain" type="Area2D" parent="Bedroom_ang1"]
-visible = false
-
-[node name="CortinaAberta1" type="Sprite2D" parent="Bedroom_ang1/OpenCurtain"]
-position = Vector2(211, 305)
-texture = ExtResource("7_1mevs")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/OpenCurtain"]
-polygon = PackedVector2Array(146, 368, 183, 522, 241, 449)
-
-[node name="ClosedCurtain" type="Area2D" parent="Bedroom_ang1"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/ClosedCurtain"]
-polygon = PackedVector2Array(146, 368, 154, 549, 213, 504)
-
-[node name="CortinaFechada1" type="Sprite2D" parent="Bedroom_ang1/ClosedCurtain"]
-position = Vector2(244, 278)
-texture = ExtResource("6_p4dgq")
-
-[node name="Posters" type="Area2D" parent="Bedroom_ang1"]
-
-[node name="Posters1" type="Sprite2D" parent="Bedroom_ang1/Posters"]
-position = Vector2(1318, 305)
-texture = ExtResource("8_xmwwd")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/Posters"]
-polygon = PackedVector2Array(1009, 379, 1172, 478, 1310, 262, 1128, 164)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Bedroom_ang1/Posters"]
-polygon = PackedVector2Array(1294, 187, 1343, 435, 1601, 426, 1542, 172)
+[node name="Posters" parent="Bedroom_ang1" instance=ExtResource("6_kscdh")]
 
 [node name="Diary" type="Area2D" parent="Bedroom_ang1"]
 
@@ -122,10 +82,25 @@ polygon = PackedVector2Array(351, 936, 349, 963, 428, 999, 443, 983, 423, 955)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/Egg"]
 polygon = PackedVector2Array(1335, 978, 1613, 1022, 1629, 885, 1614, 724, 1387, 712, 1371, 864)
 
-[node name="Window" type="Area2D" parent="Bedroom_ang1"]
+[node name="WindowTextureButton" type="TextureButton" parent="Bedroom_ang1"]
+offset_left = -21.0
+offset_top = 50.0
+offset_right = 89.0
+offset_bottom = 514.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/Window"]
-polygon = PackedVector2Array(-9, 565, 147, 459, 125, 28, -14, 80)
+[node name="RightTextureButton" type="TextureButton" parent="Bedroom_ang1"]
+offset_left = 1714.0
+offset_top = 639.0
+offset_right = 1901.0
+offset_bottom = 726.0
+texture_normal = ExtResource("21_524u1")
+
+[node name="LeftTextureButton" type="TextureButton" parent="Bedroom_ang1"]
+offset_left = 16.0
+offset_top = 640.0
+offset_right = 203.0
+offset_bottom = 727.0
+texture_normal = ExtResource("22_am001")
 
 [node name="Bedroom_ang2" parent="." instance=ExtResource("1_pel1v")]
 visible = false
@@ -221,10 +196,38 @@ polygon = PackedVector2Array(838, 679, 864, 674, 954, 773, 968, 921, 891, 949, 8
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/Wires"]
 polygon = PackedVector2Array(1017, 688, 1028, 746, 1054, 752, 1201, 718, 1165, 634)
 
+[node name="RightTextureButton" type="TextureButton" parent="Bedroom_ang2"]
+offset_left = 1714.0
+offset_top = 639.0
+offset_right = 1901.0
+offset_bottom = 726.0
+texture_normal = ExtResource("21_524u1")
+
+[node name="LeftTextureButton" type="TextureButton" parent="Bedroom_ang2"]
+offset_left = 16.0
+offset_top = 640.0
+offset_right = 203.0
+offset_bottom = 727.0
+texture_normal = ExtResource("22_am001")
+
 [node name="Bedroom_ang3" parent="." instance=ExtResource("1_pel1v")]
 visible = false
 scale = Vector2(1, 1)
 texture = SubResource("CompressedTexture2D_rsyrb")
+
+[node name="RightTextureButton" type="TextureButton" parent="Bedroom_ang3"]
+offset_left = 1714.0
+offset_top = 639.0
+offset_right = 1901.0
+offset_bottom = 726.0
+texture_normal = ExtResource("21_524u1")
+
+[node name="LeftTextureButton" type="TextureButton" parent="Bedroom_ang3"]
+offset_left = 16.0
+offset_top = 640.0
+offset_right = 203.0
+offset_bottom = 727.0
+texture_normal = ExtResource("22_am001")
 
 [node name="Window" parent="." instance=ExtResource("1_pel1v")]
 visible = false
@@ -257,17 +260,27 @@ position = Vector2(965, 544)
 texture = ExtResource("22_vxcej")
 metadata/_edit_lock_ = true
 
-[node name="RightTextureButton" type="TextureButton" parent="."]
-offset_left = 1737.0
-offset_top = 202.0
-offset_right = 1913.0
-offset_bottom = 970.0
+[node name="SAIR" type="Button" parent="Window"]
+offset_left = 1672.0
+offset_top = 950.0
+offset_right = 1867.0
+offset_bottom = 1048.0
+icon = ExtResource("23_00nc7")
 
-[node name="LeftTextureButton" type="TextureButton" parent="."]
-offset_left = -3.0
-offset_top = 206.0
-offset_right = 173.0
-offset_bottom = 974.0
+[node name="Label" type="Label" parent="Window"]
+offset_left = 1650.0
+offset_top = 833.0
+offset_right = 1888.0
+offset_bottom = 923.0
+text = "Tempo restante: 
+          xx:xx"
+label_settings = SubResource("LabelSettings_yr4tl")
 
-[connection signal="pressed" from="RightTextureButton" to="." method="_on_right_texture_button_pressed"]
-[connection signal="pressed" from="LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
+[connection signal="pressed" from="Bedroom_ang1/WindowTextureButton" to="." method="_on_window_texture_button_pressed"]
+[connection signal="pressed" from="Bedroom_ang1/RightTextureButton" to="." method="_on_right_texture_button_pressed"]
+[connection signal="pressed" from="Bedroom_ang1/LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
+[connection signal="pressed" from="Bedroom_ang2/RightTextureButton" to="." method="_on_right_texture_button_pressed"]
+[connection signal="pressed" from="Bedroom_ang2/LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
+[connection signal="pressed" from="Bedroom_ang3/RightTextureButton" to="." method="_on_right_texture_button_pressed"]
+[connection signal="pressed" from="Bedroom_ang3/LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
+[connection signal="pressed" from="Window/SAIR" to="." method="_on_sair_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bquq8mex3dhki"
-path="res://.godot/imported/Cenario_1.png-246a477860d4f6e167b6ca74a432de76.ctex"
+uid="uid://cu3d0xxe30ug3"
+path="res://.godot/imported/Tela Fundo2_2.png-d1889346f7af91e4bbe192eb868c8946.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cenario/Cenario_1.png"
-dest_files=["res://.godot/imported/Cenario_1.png-246a477860d4f6e167b6ca74a432de76.ctex"]
+source_file="res://art/itens/Tela Fundo2_2.png"
+dest_files=["res://.godot/imported/Tela Fundo2_2.png-d1889346f7af91e4bbe192eb868c8946.ctex"]
 
 [params]
 

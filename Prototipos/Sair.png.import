@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bquq8mex3dhki"
-path="res://.godot/imported/Cenario_1.png-246a477860d4f6e167b6ca74a432de76.ctex"
+uid="uid://bfnbtdy3hmmgt"
+path="res://.godot/imported/Sair.png-c3ea54a916f586e6b3c35bb7d0b1e952.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cenario/Cenario_1.png"
-dest_files=["res://.godot/imported/Cenario_1.png-246a477860d4f6e167b6ca74a432de76.ctex"]
+source_file="res://Prototipos/Sair.png"
+dest_files=["res://.godot/imported/Sair.png-c3ea54a916f586e6b3c35bb7d0b1e952.ctex"]
 
 [params]
 

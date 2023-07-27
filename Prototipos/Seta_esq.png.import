@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bquq8mex3dhki"
-path="res://.godot/imported/Cenario_1.png-246a477860d4f6e167b6ca74a432de76.ctex"
+uid="uid://bmq5wusioq0uc"
+path="res://.godot/imported/Seta_esq.png-7dd4f1d2cfa4fb4eb66078af5c3466ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cenario/Cenario_1.png"
-dest_files=["res://.godot/imported/Cenario_1.png-246a477860d4f6e167b6ca74a432de76.ctex"]
+source_file="res://Prototipos/Seta_esq.png"
+dest_files=["res://.godot/imported/Seta_esq.png-7dd4f1d2cfa4fb4eb66078af5c3466ea.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bquq8mex3dhki"
-path="res://.godot/imported/Cenario_1.png-246a477860d4f6e167b6ca74a432de76.ctex"
+uid="uid://d4agkej45ks67"
+path="res://.godot/imported/chave.png-f572abcf0e3089bac30f23f9b91dd1ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cenario/Cenario_1.png"
-dest_files=["res://.godot/imported/Cenario_1.png-246a477860d4f6e167b6ca74a432de76.ctex"]
+source_file="res://Prototipos/chave.png"
+dest_files=["res://.godot/imported/chave.png-f572abcf0e3089bac30f23f9b91dd1ce.ctex"]
 
 [params]
 
