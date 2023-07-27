@@ -10,10 +10,10 @@ script = ExtResource("1_6wd3v")
 position = Vector2(1318, 305)
 texture = ExtResource("2_1302t")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPoster1" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(1009, 379, 1172, 478, 1310, 262, 1128, 164)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPoster2" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(1294, 187, 1343, 435, 1601, 426, 1542, 172)
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://wsye6uj8eng0"]
+
+[ext_resource type="Script" path="res://Diary.gd" id="1_r8dbp"]
+[ext_resource type="Texture2D" uid="uid://deelibispwodp" path="res://art/itens/diario_1.png" id="2_o4itk"]
+
+[node name="Diary" type="Area2D"]
+script = ExtResource("1_r8dbp")
+
+[node name="Diario1" type="Sprite2D" parent="."]
+position = Vector2(924, 758)
+texture = ExtResource("2_o4itk")
+
+[node name="CollisionDiary" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(863, 684, 892, 785, 961, 770, 934, 670)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
