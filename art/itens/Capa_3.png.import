@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t26p5edgb7ot"
-path="res://.godot/imported/Richas .png-dc1e2d93def29ecfa9f37c9d036650e8.ctex"
+uid="uid://bha462hydby6q"
+path="res://.godot/imported/Capa_3.png-50dc2e9c068be01aefc052bebb647729.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/personagensVN/Richas .png"
-dest_files=["res://.godot/imported/Richas .png-dc1e2d93def29ecfa9f37c9d036650e8.ctex"]
+source_file="res://art/itens/Capa_3.png"
+dest_files=["res://.godot/imported/Capa_3.png-50dc2e9c068be01aefc052bebb647729.ctex"]
 
 [params]
 

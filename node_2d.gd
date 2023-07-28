@@ -37,7 +37,6 @@ var janela = rng.randi_range(120, 121)
 
 func _process(delta):
 	time += delta
-	# print("Time: ", time)
 	var Temp = get_node("Window/Timer")
 	
 	if time >= randomInt1 && trovao1 == false:
@@ -158,3 +157,6 @@ func _on_window_texture_button_mouse_entered():
 
 func _on_window_texture_button_mouse_exited():
 	$Bedroom_ang1/Ver_janela.hide()
+
+
+

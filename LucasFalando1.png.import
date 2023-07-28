@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2txn5ggwq4wi"
-path="res://.godot/imported/protaFalando1.png-91d1552f9437257ae6f8401a7a6e7736.ctex"
+uid="uid://d301tqaivfvfo"
+path="res://.godot/imported/LucasFalando1.png-e713378071db858b0134b3cc0c2904bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/personagensVN/protaFalando1.png"
-dest_files=["res://.godot/imported/protaFalando1.png-91d1552f9437257ae6f8401a7a6e7736.ctex"]
+source_file="res://LucasFalando1.png"
+dest_files=["res://.godot/imported/LucasFalando1.png-e713378071db858b0134b3cc0c2904bc.ctex"]
 
 [params]
 

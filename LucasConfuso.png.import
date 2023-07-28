@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkbo4kjdlpwaj"
-path="res://.godot/imported/cenario_2.png-91bac667c11abc4e0077042eee2db91f.ctex"
+uid="uid://dr41q8ac00e06"
+path="res://.godot/imported/LucasConfuso.png-54a6e1f6d3680b0f3664e7894f7d843f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cenario/cenario_2.png"
-dest_files=["res://.godot/imported/cenario_2.png-91bac667c11abc4e0077042eee2db91f.ctex"]
+source_file="res://LucasConfuso.png"
+dest_files=["res://.godot/imported/LucasConfuso.png-54a6e1f6d3680b0f3664e7894f7d843f.ctex"]
 
 [params]
 

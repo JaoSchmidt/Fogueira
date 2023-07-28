@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cecxcel4d8ujc"]
+
+[ext_resource type="Script" path="res://Quarto2/backpack.gd" id="1_h8gpl"]
+[ext_resource type="Texture2D" uid="uid://bqhayn784hy5h" path="res://art/itens/mochilaAberta_2.png" id="2_spls4"]
+[ext_resource type="Texture2D" uid="uid://cr8odhim8pwpy" path="res://art/itens/mochilaFechada_2.png" id="3_xf276"]
+
+[node name="Backpack" type="Area2D"]
+script = ExtResource("1_h8gpl")
+
+[node name="MochilaAberta" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(365, 745)
+texture = ExtResource("2_spls4")
+
+[node name="CollisionMochA" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(276, 601, 240, 725, 465, 723, 466, 602)
+
+[node name="MochilaFechada" type="Sprite2D" parent="."]
+position = Vector2(363, 808)
+texture = ExtResource("3_xf276")
+
+[node name="CollisionMochF" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(296, 972, 490, 896, 407, 682, 224, 724)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

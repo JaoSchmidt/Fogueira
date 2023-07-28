@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ihwpqo00o44v"]
 
-[ext_resource type="Script" path="res://cobertor.gd" id="1_h2fco"]
+[ext_resource type="Script" path="res://Quarto1/cobertor.gd" id="1_h2fco"]
 [ext_resource type="Texture2D" uid="uid://cqobvpxex7uwx" path="res://art/itens/cobertorFechado_1.png" id="1_r4dqk"]
 [ext_resource type="Texture2D" uid="uid://d7b7ge5mimsh" path="res://art/itens/cobertorAberto_1.png" id="2_eagme"]
 

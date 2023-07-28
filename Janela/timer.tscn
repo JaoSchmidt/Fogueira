@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://rkoumkkhqlf8"]
 
-[ext_resource type="Script" path="res://Tempo.gd" id="1_2q63v"]
+[ext_resource type="Script" path="res://Janela/Tempo.gd" id="1_2q63v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jryye"]
 font_size = 50

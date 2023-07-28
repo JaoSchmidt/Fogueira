@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvmudw71nlhgg"
-path="res://.godot/imported/protaRaiva.png-85e9415150718553bc44706c3f65682c.ctex"
+uid="uid://ds81av7rm6gd7"
+path="res://.godot/imported/Inventario.png-f5932ae12a5db490e7960598972e9526.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/personagensVN/protaRaiva.png"
-dest_files=["res://.godot/imported/protaRaiva.png-85e9415150718553bc44706c3f65682c.ctex"]
+source_file="res://art/HUD/Inventario.png"
+dest_files=["res://.godot/imported/Inventario.png-f5932ae12a5db490e7960598972e9526.ctex"]
 
 [params]
 
