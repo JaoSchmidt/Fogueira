@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://bev73wi0l466q"]
-
-[node name="Bedroom_ang" type="Sprite2D"]
-scale = Vector2(0.711111, 0.711111)
-centered = false
