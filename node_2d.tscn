@@ -1,8 +1,8 @@
-[gd_scene load_steps=31 format=3 uid="uid://cgv8wc1ikc084"]
+[gd_scene load_steps=33 format=3 uid="uid://cgv8wc1ikc084"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_lkydj"]
-[ext_resource type="PackedScene" uid="uid://2mf2pyrq5a2q" path="res://quarto1.tscn" id="1_pel1v"]
-[ext_resource type="Texture2D" uid="uid://bquq8mex3dhki" path="res://art/cenario/Cenario_1.png" id="3_gef6a"]
+[ext_resource type="PackedScene" uid="uid://bev73wi0l466q" path="res://quarto1.tscn" id="1_pel1v"]
+[ext_resource type="Texture2D" uid="uid://bquq8mex3dhki" path="res://art/cenario/cenario_1.png" id="3_gef6a"]
 [ext_resource type="PackedScene" uid="uid://ihwpqo00o44v" path="res://cobertor.tscn" id="4_86pwm"]
 [ext_resource type="PackedScene" uid="uid://d0vo15nm7cknt" path="res://cortina.tscn" id="5_cyoy3"]
 [ext_resource type="PackedScene" uid="uid://dfwop73gf4uk8" path="res://posters.tscn" id="6_kscdh"]
@@ -26,6 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://bfnbtdy3hmmgt" path="res://Prototipos/Sair.png" id="23_00nc7"]
 [ext_resource type="Texture2D" uid="uid://cdidxd5t6of8u" path="res://Prototipos/Filtro Ansiedade (1).png" id="25_2ch56"]
 [ext_resource type="Texture2D" uid="uid://bun3g365e831v" path="res://Prototipos/Filtro Ansiedade 2.png" id="26_tcakv"]
+[ext_resource type="Script" path="res://DialogueSystem.gd" id="27_wiok2"]
+[ext_resource type="Texture2D" uid="uid://dm1ehqnqmd738" path="res://Richas .png" id="28_8dhtn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1pu81"]
 font_size = 60
@@ -302,6 +304,35 @@ texture = ExtResource("25_2ch56")
 visible = false
 position = Vector2(958, 545)
 texture = ExtResource("26_tcakv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -2.0
+offset_top = 855.0
+offset_right = 1904.0
+offset_bottom = 1087.0
+color = Color(0.427451, 0.427451, 0.427451, 1)
+script = ExtResource("27_wiok2")
+dialogPath = "res://Dialogues/dialogue1.json"
+
+[node name="Name" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 40.0
+text = "Nome Aqui"
+
+[node name="Text" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 320.0
+offset_bottom = 192.0
+text = "Texto aqui"
+
+[node name="Timer" type="Timer" parent="ColorRect"]
+
+[node name="Portrait" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1759, 30)
+texture = ExtResource("28_8dhtn")
 
 [connection signal="input_event" from="Bedroom_ang1/Box" to="Bedroom_ang1/Box" method="_on_input_event"]
 [connection signal="text_submitted" from="Bedroom_ang1/Box/LineEdit" to="Bedroom_ang1/Box" method="_on_line_edit_text_submitted"]

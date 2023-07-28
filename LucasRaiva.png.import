@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t26p5edgb7ot"
-path="res://.godot/imported/Richas .png-dc1e2d93def29ecfa9f37c9d036650e8.ctex"
+uid="uid://dlflfjuvykana"
+path="res://.godot/imported/LucasRaiva.png-2e762e90dfa32630c6f2407170f6a0a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/personagensVN/Richas .png"
-dest_files=["res://.godot/imported/Richas .png-dc1e2d93def29ecfa9f37c9d036650e8.ctex"]
+source_file="res://LucasRaiva.png"
+dest_files=["res://.godot/imported/LucasRaiva.png-2e762e90dfa32630c6f2407170f6a0a6.ctex"]
 
 [params]
 

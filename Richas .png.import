@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2txn5ggwq4wi"
-path="res://.godot/imported/protaFalando1.png-91d1552f9437257ae6f8401a7a6e7736.ctex"
+uid="uid://dm1ehqnqmd738"
+path="res://.godot/imported/Richas .png-fe2db45d0db94246f56e7d704a1b80fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/personagensVN/protaFalando1.png"
-dest_files=["res://.godot/imported/protaFalando1.png-91d1552f9437257ae6f8401a7a6e7736.ctex"]
+source_file="res://Richas .png"
+dest_files=["res://.godot/imported/Richas .png-fe2db45d0db94246f56e7d704a1b80fc.ctex"]
 
 [params]
 

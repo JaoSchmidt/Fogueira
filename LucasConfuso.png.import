@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkcadw8upk5sy"
-path="res://.godot/imported/protaConfuso.png-1805e4e8ac78c52a57a2ce6cf437591b.ctex"
+uid="uid://dr41q8ac00e06"
+path="res://.godot/imported/LucasConfuso.png-54a6e1f6d3680b0f3664e7894f7d843f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/personagensVN/protaConfuso.png"
-dest_files=["res://.godot/imported/protaConfuso.png-1805e4e8ac78c52a57a2ce6cf437591b.ctex"]
+source_file="res://LucasConfuso.png"
+dest_files=["res://.godot/imported/LucasConfuso.png-54a6e1f6d3680b0f3664e7894f7d843f.ctex"]
 
 [params]
 
