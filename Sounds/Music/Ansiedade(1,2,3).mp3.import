@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Ansiedade(1,2,3).mp3-1bd0d50d9d53aa338e16162a
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

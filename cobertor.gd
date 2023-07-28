@@ -5,7 +5,7 @@ func _ready():
 	$Collision_aberto.set_disabled(true)
 
 func _on_input_event(viewport, event, shape_idx):
-		if event is InputEventMouseButton && event.pressed:
+		if event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
 			if clicked == false:
 				$Cobertor_fechado.hide()
 				$Cobertor_aberto.show()

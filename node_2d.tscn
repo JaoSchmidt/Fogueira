@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cgv8wc1ikc084"]
+[gd_scene load_steps=41 format=3 uid="uid://cgv8wc1ikc084"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_lkydj"]
 [ext_resource type="PackedScene" uid="uid://2mf2pyrq5a2q" path="res://quarto1.tscn" id="1_pel1v"]
@@ -24,19 +24,31 @@
 [ext_resource type="Texture2D" uid="uid://bmq5wusioq0uc" path="res://Prototipos/Seta_esq.png" id="22_am001"]
 [ext_resource type="Texture2D" uid="uid://56imwqv8vxf7" path="res://art/cenario/Vidro.png" id="22_vxcej"]
 [ext_resource type="Texture2D" uid="uid://bfnbtdy3hmmgt" path="res://Prototipos/Sair.png" id="23_00nc7"]
+[ext_resource type="PackedScene" uid="uid://rkoumkkhqlf8" path="res://timer.tscn" id="24_7awoe"]
 [ext_resource type="Texture2D" uid="uid://cdidxd5t6of8u" path="res://Prototipos/Filtro Ansiedade (1).png" id="25_2ch56"]
 [ext_resource type="Texture2D" uid="uid://bun3g365e831v" path="res://Prototipos/Filtro Ansiedade 2.png" id="26_tcakv"]
+[ext_resource type="AudioStream" uid="uid://bx0eetk0ew3c" path="res://Sounds/Music/Ansiedade(1).mp3" id="28_lykl1"]
+[ext_resource type="AudioStream" uid="uid://byt6nyr5ti2v" path="res://Sounds/Music/Ansiedade(2).mp3" id="29_6hcan"]
+[ext_resource type="AudioStream" uid="uid://dpeuf536t24to" path="res://Sounds/Music/Ansiedade(3).mp3" id="30_2a1j3"]
+[ext_resource type="AudioStream" uid="uid://cbre5iaap4g2g" path="res://Sounds/SFX/Porta Abrindo.wav" id="31_a6x6v"]
+[ext_resource type="AudioStream" uid="uid://bfitm3ojvkp7f" path="res://Sounds/SFX/Chuva.wav" id="32_e7k73"]
+[ext_resource type="AudioStream" uid="uid://dck6mtc4fx1vu" path="res://Sounds/SFX/Campainha.wav" id="33_ud3ab"]
+[ext_resource type="AudioStream" uid="uid://cdjtemhsmtrkn" path="res://Sounds/SFX/Porta fechando.wav" id="34_khc5b"]
+[ext_resource type="AudioStream" uid="uid://bnubnfpahm6s6" path="res://Sounds/SFX/Toque Janela.wav" id="35_rnu6f"]
+[ext_resource type="AudioStream" uid="uid://6p8ybjck1dxg" path="res://Sounds/SFX/Trovao.wav" id="36_10jp4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1pu81"]
 font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_hpiln"]
+font_size = 35
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.564706)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qofkl"]
 load_path = "res://.godot/imported/cenario_2.png-91bac667c11abc4e0077042eee2db91f.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rsyrb"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_yr4tl"]
-font_size = 30
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_lkydj")
@@ -118,6 +130,16 @@ offset_top = 640.0
 offset_right = 203.0
 offset_bottom = 727.0
 texture_normal = ExtResource("22_am001")
+
+[node name="Ver_janela" type="Label" parent="Bedroom_ang1"]
+visible = false
+offset_left = -55.0
+offset_top = 545.0
+offset_right = 323.0
+offset_bottom = 611.0
+text = "Ver o tempo"
+label_settings = SubResource("LabelSettings_hpiln")
+horizontal_alignment = 1
 
 [node name="Bedroom_ang2" parent="." instance=ExtResource("1_pel1v")]
 visible = false
@@ -253,11 +275,13 @@ texture = ExtResource("14_5favy")
 metadata/_edit_lock_ = true
 
 [node name="Monstro1" type="Sprite2D" parent="Window"]
+visible = false
 position = Vector2(961, 541)
 texture = ExtResource("18_fqeoo")
 metadata/_edit_lock_ = true
 
 [node name="Monstro2" type="Sprite2D" parent="Window"]
+visible = false
 position = Vector2(961, 554)
 texture = ExtResource("19_xtuet")
 metadata/_edit_lock_ = true
@@ -268,6 +292,7 @@ texture = ExtResource("20_gcj7k")
 metadata/_edit_lock_ = true
 
 [node name="Monstro3" type="Sprite2D" parent="Window"]
+visible = false
 position = Vector2(960, 540)
 texture = ExtResource("21_wdsre")
 metadata/_edit_lock_ = true
@@ -277,14 +302,7 @@ position = Vector2(965, 544)
 texture = ExtResource("22_vxcej")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="Window"]
-offset_left = 1650.0
-offset_top = 833.0
-offset_right = 1888.0
-offset_bottom = 923.0
-text = "Tempo restante: 
-          xx:xx"
-label_settings = SubResource("LabelSettings_yr4tl")
+[node name="Timer" parent="Window" instance=ExtResource("24_7awoe")]
 
 [node name="SAIR" type="Button" parent="Window"]
 offset_left = 1672.0
@@ -295,16 +313,55 @@ icon = ExtResource("23_00nc7")
 
 [node name="Ansiedade_medio" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(966, 542)
+position = Vector2(960, 540)
 texture = ExtResource("25_2ch56")
 
 [node name="Ansiedade_max" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(958, 545)
+position = Vector2(959, 540)
 texture = ExtResource("26_tcakv")
+
+[node name="Ansiedade1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("28_lykl1")
+volume_db = 10.0
+
+[node name="Ansiedade2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("29_6hcan")
+volume_db = 10.0
+
+[node name="Ansiedade3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("30_2a1j3")
+volume_db = 10.0
+
+[node name="Porta_abre" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("31_a6x6v")
+volume_db = 12.0
+
+[node name="Chuva" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("32_e7k73")
+volume_db = 11.0
+autoplay = true
+
+[node name="Campainha" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("33_ud3ab")
+volume_db = 7.0
+
+[node name="Porta_fecha" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("34_khc5b")
+volume_db = 12.0
+
+[node name="Janela" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("35_rnu6f")
+volume_db = 24.0
+
+[node name="Trovao" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("36_10jp4")
+volume_db = 12.0
 
 [connection signal="input_event" from="Bedroom_ang1/Box" to="Bedroom_ang1/Box" method="_on_input_event"]
 [connection signal="text_submitted" from="Bedroom_ang1/Box/LineEdit" to="Bedroom_ang1/Box" method="_on_line_edit_text_submitted"]
+[connection signal="mouse_entered" from="Bedroom_ang1/WindowTextureButton" to="." method="_on_window_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="Bedroom_ang1/WindowTextureButton" to="." method="_on_window_texture_button_mouse_exited"]
 [connection signal="pressed" from="Bedroom_ang1/WindowTextureButton" to="." method="_on_window_texture_button_pressed"]
 [connection signal="pressed" from="Bedroom_ang1/RightTextureButton" to="." method="_on_right_texture_button_pressed"]
 [connection signal="pressed" from="Bedroom_ang1/LeftTextureButton" to="." method="_on_left_texture_button_pressed"]

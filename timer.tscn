@@ -9,12 +9,13 @@ font_size = 30
 script = ExtResource("1_2q63v")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = 1650.0
 offset_top = 833.0
 offset_right = 1888.0
 offset_bottom = 923.0
 text = "Tempo restante: 
-          xx:xx"
+          "
 label_settings = SubResource("LabelSettings_jryye")
 
 [connection signal="timeout" from="." to="." method="_on_timeout"]
