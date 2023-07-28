@@ -26,7 +26,7 @@ func _ready():
 	$Chuva.play()
 	rng.randomize()
 
-var randomInt1 = rng.randi_range(30, 0)
+var randomInt1 = rng.randi_range(30, 45)
 var randomInt2 = rng.randi_range(55, 70)
 var randomInt3 = rng.randi_range(95, 110)
 var randomInt4 = rng.randi_range(135, 160)
