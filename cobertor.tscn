@@ -9,10 +9,11 @@ position = Vector2(255, 581)
 script = ExtResource("1_h2fco")
 
 [node name="Cobertor_fechado" type="Sprite2D" parent="."]
+position = Vector2(-12, -8)
 texture = ExtResource("1_r4dqk")
 
 [node name="Collision_fechado" type="CollisionPolygon2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(-12, -5)
 scale = Vector2(17, 17)
 polygon = PackedVector2Array(-0.470588, -8.82353, -5.76471, -3.05882, -6.88235, 6.11765, -3, 8.29412, 5.52941, 10.0588, 3.82353, 2.58824, 1.58824, -3.64706)
 

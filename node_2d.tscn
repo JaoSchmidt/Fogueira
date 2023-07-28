@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://4pj7qgbnfdq2" path="res://art/itens/telaFundo2_2.png" id="15_3pgly"]
 [ext_resource type="Texture2D" uid="uid://3dm27gm8hjos" path="res://art/itens/telaFundo3_2.png" id="16_ybmkq"]
 [ext_resource type="Texture2D" uid="uid://sa05xbeo7osy" path="res://art/cenario/Monstro1.png" id="18_fqeoo"]
+[ext_resource type="Texture2D" uid="uid://nir67cw82uyt" path="res://art/cenario/Cenario 3.png" id="18_mhm14"]
 [ext_resource type="Texture2D" uid="uid://kb7w0ad1xwuy" path="res://art/cenario/Monstro2.png" id="19_xtuet"]
 [ext_resource type="Texture2D" uid="uid://ehff1ovq414j" path="res://art/cenario/Chuva.png" id="20_gcj7k"]
 [ext_resource type="Texture2D" uid="uid://cv6fmra22fwl3" path="res://Prototipos/Seta_Dir.png" id="21_524u1"]
@@ -33,9 +34,7 @@
 font_size = 60
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qofkl"]
-load_path = "res://.godot/imported/cenario_2.png-91bac667c11abc4e0077042eee2db91f.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rsyrb"]
+load_path = "res://.godot/imported/Cenario 2a.png-36319cd992e3e7b2ea8ab97d3f9dbf5a.ctex"
 
 [sub_resource type="LabelSettings" id="LabelSettings_yr4tl"]
 font_size = 30
@@ -54,17 +53,19 @@ texture = ExtResource("3_gef6a")
 metadata/_edit_lock_ = true
 
 [node name="Pillow" type="Area2D" parent="Bedroom_ang1"]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/Pillow"]
 polygon = PackedVector2Array(371, 697, 503, 565, 429, 483, 243, 605)
 
 [node name="Bed" type="Area2D" parent="Bedroom_ang1"]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/Bed"]
 polygon = PackedVector2Array(207, 735, 470, 520, 1157, 654, 1162, 813, 926, 1058, 609, 990, 460, 797)
 
 [node name="Cobertor" parent="Bedroom_ang1" instance=ExtResource("4_86pwm")]
-position = Vector2(420, 850)
+position = Vector2(433, 857)
 
 [node name="Cortina" parent="Bedroom_ang1" instance=ExtResource("5_cyoy3")]
 position = Vector2(24, 2)
@@ -143,7 +144,7 @@ position = Vector2(1570, 536)
 texture = ExtResource("11_3nfh0")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/Violin"]
-polygon = PackedVector2Array(1483, 289, 1433, 679, 1619, 791, 1703, 331)
+polygon = PackedVector2Array(1483, 289, 1433, 679, 1619, 791, 1697, 327)
 
 [node name="Sword" type="Area2D" parent="Bedroom_ang2"]
 
@@ -213,7 +214,7 @@ polygon = PackedVector2Array(838, 679, 864, 674, 954, 773, 968, 921, 891, 949, 8
 [node name="Wires" type="Area2D" parent="Bedroom_ang2"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/Wires"]
-polygon = PackedVector2Array(1017, 688, 1028, 746, 1054, 752, 1201, 718, 1165, 634)
+polygon = PackedVector2Array(1006, 650, 1027, 758, 1201, 718, 1176, 629)
 
 [node name="RightTextureButton" type="TextureButton" parent="Bedroom_ang2"]
 offset_left = 1714.0
@@ -232,7 +233,7 @@ texture_normal = ExtResource("22_am001")
 [node name="Bedroom_ang3" parent="." instance=ExtResource("1_pel1v")]
 visible = false
 scale = Vector2(1, 1)
-texture = SubResource("CompressedTexture2D_rsyrb")
+texture = ExtResource("18_mhm14")
 
 [node name="RightTextureButton" type="TextureButton" parent="Bedroom_ang3"]
 offset_left = 1714.0
@@ -306,6 +307,7 @@ position = Vector2(958, 545)
 texture = ExtResource("26_tcakv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -2.0
 offset_top = 855.0
 offset_right = 1904.0
@@ -331,7 +333,11 @@ text = "Texto aqui"
 [node name="Timer" type="Timer" parent="ColorRect"]
 
 [node name="Portrait" type="Sprite2D" parent="ColorRect"]
-position = Vector2(1759, 30)
+position = Vector2(1741, -116)
+texture = ExtResource("28_8dhtn")
+
+[node name="Portrait2" type="Sprite2D" parent="ColorRect"]
+position = Vector2(361, -163)
 texture = ExtResource("28_8dhtn")
 
 [connection signal="input_event" from="Bedroom_ang1/Box" to="Bedroom_ang1/Box" method="_on_input_event"]

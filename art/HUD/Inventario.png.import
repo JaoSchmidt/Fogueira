@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkbo4kjdlpwaj"
-path="res://.godot/imported/cenario_2.png-91bac667c11abc4e0077042eee2db91f.ctex"
+uid="uid://ds81av7rm6gd7"
+path="res://.godot/imported/Inventario.png-f5932ae12a5db490e7960598972e9526.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cenario/cenario_2.png"
-dest_files=["res://.godot/imported/cenario_2.png-91bac667c11abc4e0077042eee2db91f.ctex"]
+source_file="res://art/HUD/Inventario.png"
+dest_files=["res://.godot/imported/Inventario.png-f5932ae12a5db490e7960598972e9526.ctex"]
 
 [params]
 
