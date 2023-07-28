@@ -28,7 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://cdidxd5t6of8u" path="res://Prototipos/Filtro Ansiedade (1).png" id="25_2ch56"]
 [ext_resource type="Texture2D" uid="uid://bun3g365e831v" path="res://Prototipos/Filtro Ansiedade 2.png" id="26_tcakv"]
 [ext_resource type="Script" path="res://DialogueSystem.gd" id="27_wiok2"]
-[ext_resource type="Texture2D" uid="uid://dm1ehqnqmd738" path="res://Richas .png" id="28_8dhtn"]
+[ext_resource type="Texture2D" path="res://Richas .png" id="28_8dhtn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1pu81"]
 font_size = 60
@@ -307,7 +307,6 @@ position = Vector2(958, 545)
 texture = ExtResource("26_tcakv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 offset_left = -2.0
 offset_top = 855.0
 offset_right = 1904.0
@@ -315,6 +314,10 @@ offset_bottom = 1087.0
 color = Color(0.427451, 0.427451, 0.427451, 1)
 script = ExtResource("27_wiok2")
 dialogPath = "res://Dialogues/dialogue1.json"
+
+[node name="Portrait" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1741, -116)
+texture = ExtResource("28_8dhtn")
 
 [node name="Name" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 0
@@ -331,14 +334,6 @@ offset_bottom = 192.0
 text = "Texto aqui"
 
 [node name="Timer" type="Timer" parent="ColorRect"]
-
-[node name="Portrait" type="Sprite2D" parent="ColorRect"]
-position = Vector2(1741, -116)
-texture = ExtResource("28_8dhtn")
-
-[node name="Portrait2" type="Sprite2D" parent="ColorRect"]
-position = Vector2(361, -163)
-texture = ExtResource("28_8dhtn")
 
 [connection signal="input_event" from="Bedroom_ang1/Box" to="Bedroom_ang1/Box" method="_on_input_event"]
 [connection signal="text_submitted" from="Bedroom_ang1/Box/LineEdit" to="Bedroom_ang1/Box" method="_on_line_edit_text_submitted"]

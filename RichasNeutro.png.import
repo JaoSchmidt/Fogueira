@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm1ehqnqmd738"
-path="res://.godot/imported/Richas .png-fe2db45d0db94246f56e7d704a1b80fc.ctex"
+uid="uid://ddcfh4l65t8j1"
+path="res://.godot/imported/RichasNeutro.png-42da37c79c87e798784c04b43742cd4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Richas .png"
-dest_files=["res://.godot/imported/Richas .png-fe2db45d0db94246f56e7d704a1b80fc.ctex"]
+source_file="res://RichasNeutro.png"
+dest_files=["res://.godot/imported/RichasNeutro.png-42da37c79c87e798784c04b43742cd4a.ctex"]
 
 [params]
 
