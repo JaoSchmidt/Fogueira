@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hogl2687xf4d"
-path="res://.godot/imported/LucasNeutro.png-d4a0939fccfca6112dad39b298d4a700.ctex"
+uid="uid://wuccxhn8gxoy"
+path="res://.godot/imported/inventarioPostersSelected.png-537699cc0eca667dd9fb6354600184b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Personagem/LucasNeutro.png"
-dest_files=["res://.godot/imported/LucasNeutro.png-d4a0939fccfca6112dad39b298d4a700.ctex"]
+source_file="res://art/HUD/inventarioPostersSelected.png"
+dest_files=["res://.godot/imported/inventarioPostersSelected.png-537699cc0eca667dd9fb6354600184b5.ctex"]
 
 [params]
 

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://vyd0fds738b6"]
+
+[ext_resource type="Texture2D" uid="uid://cy3h8r6tux7bo" path="res://art/HUD/inventarioSelected.png" id="1_g5eoo"]
+[ext_resource type="Script" path="res://InventoryButton.gd" id="1_nxodh"]
+
+[node name="InventoryButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+toggle_mode = true
+texture_pressed = ExtResource("1_g5eoo")
+script = ExtResource("1_nxodh")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

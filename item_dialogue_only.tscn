@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://6w1boscmyfjs"]
+
+[ext_resource type="Script" path="res://ItemDialogueOnly.gd" id="1_g28pt"]
+
+[node name="ItemDialogueOnly" type="Area2D"]
+collision_mask = 0
+script = ExtResource("1_g28pt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -14,9 +14,13 @@ var portab = false
 var jan = false
 var rng = RandomNumberGenerator.new()
 
+# tabela de condições
 
 
 func _ready():
+	
+	
+	
 	bedroom_part.append($Bedroom_ang1)
 	bedroom_part.append($Bedroom_ang3)
 	bedroom_part.append($Bedroom_ang2)
@@ -157,6 +161,8 @@ func _on_window_texture_button_mouse_entered():
 
 func _on_window_texture_button_mouse_exited():
 	$Bedroom_ang1/Ver_janela.hide()
+
+
 
 
 

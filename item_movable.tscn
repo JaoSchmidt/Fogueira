@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl5o6chxh8abo"]
+
+[ext_resource type="Script" path="res://ItemMovable.gd" id="1_202p6"]
+
+[node name="ItemMovable" type="Area2D"]
+collision_mask = 0
+script = ExtResource("1_202p6")
+
+[node name="Sprite1" type="Sprite2D" parent="."]
+
+[node name="CollisionPolygon1" type="CollisionPolygon2D" parent="."]
+
+[node name="Sprite2" type="Sprite2D" parent="."]
+
+[node name="CollisionPolygon2" type="CollisionPolygon2D" parent="."]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
