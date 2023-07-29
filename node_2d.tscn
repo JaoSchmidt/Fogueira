@@ -495,7 +495,7 @@ offset_right = 1904.0
 offset_bottom = 1087.0
 color = Color(0.427451, 0.427451, 0.427451, 1)
 script = ExtResource("27_wiok2")
-dialogPath = "res://Dialogues/dialogue1.json"
+dialogPath = "res://Dialogues/DialagoInicial.json"
 
 [node name="Portrait" type="Sprite2D" parent="ColorRect"]
 position = Vector2(1741, -116)
