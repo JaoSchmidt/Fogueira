@@ -1,12 +1,13 @@
 [
-	{"Name":"Lucas", "Emotion":"Neutro", "Text":"Você se olha no espelho, em um breve momento você começa a refletir"},
-	{"Name":"Lucas", "Emotion":"Neutro", "Text":"E se ele ainda estivesse aqui?"},
-	{"Name":"Lucas", "Emotion":"Neutro", "Text":"ele conseguiria te proteger de todos esses monstros?"},
-	{"Name":"Lucas", "Emotion":"Neutro", "Text":"Você falaria para ele?"},
-	{"Name":"Lucas", "Emotion":"Neutro", "Text":"Será que ele ficaria ao seu lado independentemente?"},
-	{"Name":"Lucas", "Emotion":"Neutro", "Text":"Tantas perguntas pra tão pouco tempo..."},
-	{"Name":"Lucas", "Emotion":"Neutro", "Text":"um pensamento adentra sua cabeça por um momento, você pode jurar que reconhece essa voz"}, 
-	{"Name":"Lucas", "Emotion":"Neutro", "Text":"Lucas, se apresse"},
-	{"Name":"Lucas", "Emotion":"Neutro", "Text":"O seu tempo tá acabando"},
-	 
+	{"Name":".", "Emotion":"", "Text":"Você se olha no espelho e reflete."},
+	{"Name":"Lucas", "Emotion":"Reflexo", "Text":"E se ele ainda estivesse aqui?"},
+	{"Name":"Lucas", "Emotion":"Reflexo", "Text":"Ele te protegeria dos monstros ou tomaria o lado deles?"},
+	{"Name":"Lucas", "Emotion":"Reflexo", "Text":"Você sequer contaria para ele?"},
+	{"Name":"Lucas", "Emotion":"Reflexo", "Text":"Ele te amaria o suficiente para estar ao seu lado?"},
+	{"Name":"Lucas", "Emotion":"Reflexo", "Text":"Mesmo sendo isso?"},
+	{"Name":"Lucas", "Emotion":"Reflexo", "Text":"São tantos pensamentos em tão pouco tempo..."},
+	{"Name":".", "Emotion":"", "Text":"..."},
+	{"Name":".", "Emotion":"", "Text":"Uma voz familiar visita sua mente."}, 
+	{"Name":"???", "Emotion":"Neutro", "Text":"Depressa, Lucas. O tempo tá passando."},
+	{"Name":"Lucas", "Emotion":"Neutro", "Text":"Melhor eu terminar de arrumar o quarto."}
 ]

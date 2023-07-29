@@ -1,3 +1,5 @@
 [
-  {"Name":"Lucas", "Emotion":"Neutro", "Text":"Eu poderia esconder algo aqui, eu só preciso achar a chave..."},  
+  {"Name":"Lucas", "Emotion":"Neutro", "Text":"Eu devo poder esconder algo aqui."},
+  {"Name":".", "Emotion":"", "Text": "Você tenta abrir, mas está trancado."},
+  {"Name":"Lucas", "Emotion":"Confuso", "Text":"Onde foi que eu deixei a chave dessa vez?"}  
 ]

@@ -1,4 +1,10 @@
 [
-	{"Name":"Lucas", "Emotion":"Neutro", "Text":"Você deita um pouco e consegue sentir seu coração desacelerar, Você se sente mais calmo"},
-
+	{"Name":".", "Emotion":"", "Text":"Você resolve deitar um pouco e esvaziar a cabeça."},
+	{"Name":".", "Emotion":"", "Text":"..."},
+	{"Name":".", "Emotion":"", "Text":"Seus pensamentos são folhas caindo lentamente sobre um rio."},
+	{"Name":".", "Emotion":"", "Text":"Dançantes e sós, eles pairam no ar."},
+	{"Name":".", "Emotion":"", "Text":"E tocam delicadamente a água corrente."},
+	{"Name":".", "Emotion":"", "Text":"E vagam longe, para nunca mais serem vistos."},
+	{"Name":".", "Emotion":"", "Text":"..."},
+	{"Name":".", "Emotion":"", "Text":"Você sente sua respiração voltar ao normal."}
 ]
