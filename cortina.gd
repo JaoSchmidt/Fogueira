@@ -18,5 +18,6 @@ func _on_input_event(viewport, event, shape_idx):
 		elif getChave == false:
 				$Chave.hide()
 				$Collision_Chave.set_disabled(true)
+				$Chave2.play()
 				getChave = true
 

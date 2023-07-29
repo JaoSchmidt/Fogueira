@@ -16,6 +16,7 @@ func update_label_text():
 func _on_timeout():
 	if tempo == 0:
 		stop()
+		get_tree().change_scene_to_file("res://game_over.tscn")
 	else:
 		tempo -= 1
 	update_label_text()

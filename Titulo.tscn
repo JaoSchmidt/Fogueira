@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhbkeg0lmg4fv"]
+
+[ext_resource type="Texture2D" uid="uid://bmnhrfcllmw0f" path="res://art/HUD/TelaInicial.png" id="1_1x2wm"]
+[ext_resource type="Script" path="res://Ansidio.gd" id="1_jbmj8"]
+[ext_resource type="Texture2D" uid="uid://bqosgaiu63hqw" path="res://art/HUD/Jogar.png" id="2_1swlh"]
+[ext_resource type="AudioStream" uid="uid://dsv30rcvtdrap" path="res://Sounds/Music/creepyMenu.mp3" id="4_xusv4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jbmj8")
+
+[node name="Ansidio" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_1x2wm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(959, 540)
+zoom = Vector2(0.711, 0.711)
+
+[node name="Play" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 672.0
+offset_right = 717.0
+offset_bottom = 848.0
+texture_normal = ExtResource("2_1swlh")
+ignore_texture_size = true
+
+[node name="Menu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_xusv4")
+volume_db = 20.0
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
