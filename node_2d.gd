@@ -13,7 +13,7 @@ var porta = false
 var portab = false
 var jan = false
 var rng = RandomNumberGenerator.new()
-
+@onready var musica = $Ansiedade1
 
 
 func _ready():
@@ -35,10 +35,34 @@ var portaA = rng.randi_range(140, 147)
 var portaF = rng.randi_range(169, 175)
 var janela = rng.randi_range(120, 121)
 
+
 func _process(delta):
+# ================= INVENTÁRIO =================
+	if $Bedroom_ang1.visible == true:
+		if $Inventário/Inventario.visible == false:
+					$Inventário/Inventario.show()
+		$Inventário/Inventario.position.x = 1140
+		$Inventário/Inventario.position.y = -31
+	
+	elif $Bedroom_ang2.visible == true:
+		if $Inventário/Inventario.visible == false:
+				$Inventário/Inventario.show()
+		$Inventário/Inventario.position.x = -221
+		$Inventário/Inventario.position.y = -40
+
+	elif $Bedroom_ang3.visible == true:
+		if $Inventário/Inventario.visible == false:
+			$Inventário/Inventario.show()
+		$Inventário/Inventario.position.x = 795
+		$Inventário/Inventario.position.y = -65
+
+	elif $Window.visible == true:
+		$Inventário/Inventario.hide()
+#=================================================
+
+# ============================= TABELA DE SONS EM TEMPO ALEATÓRIO =================================	
 	time += delta
 	var Temp = get_node("Window/Timer")
-	
 	if time >= randomInt1 && trovao1 == false:
 		$Trovao.play()
 		trovao1 = true
@@ -86,7 +110,8 @@ func _process(delta):
 		jan = true
 	elif time < janela:
 		jan = false
-	
+# =================================================================================================
+
 	if time >= 60 && time <= 121:
 		$Window/Monstro1.show()
 		$Window/Monstro2.hide()
@@ -101,8 +126,9 @@ func _process(delta):
 			$Window/Monstro2.show()
 			$Ansiedade_medio.show()
 			$Ansiedade_max.hide()
-			$Ansiedade1.stop()
-			$Ansiedade2.play()
+			musica.stop()
+			musica = $Ansiedade2
+			musica.play()
 			play1 = true
 			
 	elif time > 154 && time < 180:
@@ -112,15 +138,18 @@ func _process(delta):
 			$Window/Monstro3.show()
 			$Ansiedade_medio.hide()
 			$Ansiedade_max.show()
-			$Ansiedade2.stop()
-			$Ansiedade3.play()
+			musica.stop()
+			musica = $Ansiedade3
+			musica.play()
 			play2 = true
+			
 	elif time >= 180:
 		$Ansiedade3.stop()
 		$Chuva.stop()
 		$Ansiedade_max.hide()
 		get_tree().change_scene_to_file("res://game_over.tscn")
 
+# ==================================================================================================
 
 func showSpecificBackgroundByIndex(index):
 	for i in range(bedroom_part.size()):
@@ -145,12 +174,15 @@ func _on_window_texture_button_pressed():
 	showSpecificBackgroundByIndex(3)
 	$Window/Timer/Label.show()
 	$Bedroom_ang1/Ver_janela.hide()
+	$RightTextureButton.hide()
+	$LeftTextureButton.hide()
 
 
 func _on_sair_pressed():
 	showSpecificBackgroundByIndex(0)
 	$Window/Timer/Label.hide()
-
+	$RightTextureButton.show()
+	$LeftTextureButton.show()
 
 func _on_window_texture_button_mouse_entered():
 	$Bedroom_ang1/Ver_janela.show()

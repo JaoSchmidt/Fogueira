@@ -27,6 +27,7 @@ zoom = Vector2(0.711, 0.711)
 [node name="Fim" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_ojd8w")
 volume_db = 20.0
+pitch_scale = 0.4
 
 [node name="Monster" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.180392)
