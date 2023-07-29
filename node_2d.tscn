@@ -1,7 +1,7 @@
 [gd_scene load_steps=55 format=3 uid="uid://cgv8wc1ikc084"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_lkydj"]
-[ext_resource type="PackedScene" uid="uid://bev73wi0l466q" path="res://quarto1.tscn" id="1_pel1v"]
+[ext_resource type="PackedScene" uid="uid://bev73wi0l466q" path="res://angulo_quarto.tscn" id="1_pel1v"]
 [ext_resource type="Script" path="res://Inventory.gd" id="2_xiypt"]
 [ext_resource type="Texture2D" uid="uid://ds81av7rm6gd7" path="res://art/HUD/Inventario.png" id="3_056rp"]
 [ext_resource type="Texture2D" uid="uid://bquq8mex3dhki" path="res://art/cenario/cenario_1.png" id="3_gef6a"]
