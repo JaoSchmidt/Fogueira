@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cgv8wc1ikc084"]
+[gd_scene load_steps=61 format=3 uid="uid://cgv8wc1ikc084"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_lkydj"]
 [ext_resource type="PackedScene" uid="uid://bev73wi0l466q" path="res://quarto1.tscn" id="1_pel1v"]
@@ -8,27 +8,44 @@
 [ext_resource type="PackedScene" uid="uid://dfwop73gf4uk8" path="res://posters.tscn" id="6_kscdh"]
 [ext_resource type="PackedScene" uid="uid://wsye6uj8eng0" path="res://diary.tscn" id="7_dqhlm"]
 [ext_resource type="Script" path="res://Box.gd" id="8_s7onw"]
+[ext_resource type="AudioStream" uid="uid://dpm66xr5rjytd" path="res://Sounds/SFX/Som De Coleta Positivo.wav" id="9_4q21c"]
 [ext_resource type="Texture2D" uid="uid://wrm0xnu7k43r" path="res://art/HUD/SetaDireita2.png" id="9_06fkr"]
+[ext_resource type="Script" path="res://Egg.gd" id="10_iopqv"]
 [ext_resource type="Texture2D" uid="uid://yordj8sw7stc" path="res://art/HUD/SetaEsquerda2.png" id="10_xpy25"]
 [ext_resource type="Texture2D" uid="uid://cn7ihw8knpews" path="res://art/itens/violino_2.png" id="11_3nfh0"]
+[ext_resource type="Texture2D" uid="uid://bhl3fxai60h72" path="res://Prototipos/Richas senha.png" id="11_imtfq"]
 [ext_resource type="Texture2D" uid="uid://bqhayn784hy5h" path="res://art/itens/mochilaAberta_2.png" id="12_5ovik"]
 [ext_resource type="PackedScene" uid="uid://b5iuqxtedsqdf" path="res://drawing.tscn" id="12_20o7i"]
+[ext_resource type="Script" path="res://Violin.gd" id="13_5o3b7"]
+[ext_resource type="AudioStream" uid="uid://b050gd2yundrf" path="res://Sounds/SFX/violin.wav" id="13_55m56"]
 [ext_resource type="Texture2D" uid="uid://cr8odhim8pwpy" path="res://art/itens/mochilaFechada_2.png" id="13_kd6yv"]
 [ext_resource type="Texture2D" uid="uid://bfim5f805rnm7" path="res://art/cenario/Janela.png" id="14_5favy"]
 [ext_resource type="Texture2D" uid="uid://b5e08i7wyjo16" path="res://art/itens/telaFundo1_2.png" id="14_aedqf"]
+[ext_resource type="Script" path="res://Computer.gd" id="15_2nvbp"]
 [ext_resource type="Texture2D" uid="uid://4pj7qgbnfdq2" path="res://art/itens/telaFundo2_2.png" id="15_3pgly"]
+[ext_resource type="Script" path="res://backpack1.gd" id="15_qcefn"]
 [ext_resource type="Texture2D" uid="uid://3dm27gm8hjos" path="res://art/itens/telaFundo3_2.png" id="16_ybmkq"]
 [ext_resource type="Texture2D" uid="uid://sa05xbeo7osy" path="res://art/cenario/Monstro1.png" id="18_fqeoo"]
 [ext_resource type="Texture2D" uid="uid://nir67cw82uyt" path="res://art/cenario/Cenario 3.png" id="18_mhm14"]
+[ext_resource type="Texture2D" uid="uid://ds81av7rm6gd7" path="res://art/HUD/Inventario.png" id="19_ko7r3"]
+[ext_resource type="AudioStream" uid="uid://ojt2kxjls1ry" path="res://Sounds/SFX/Teclado PC .wav" id="19_msry4"]
 [ext_resource type="Texture2D" uid="uid://kb7w0ad1xwuy" path="res://art/cenario/Monstro2.png" id="19_xtuet"]
+[ext_resource type="Script" path="res://Inventário.gd" id="19_yyp4v"]
+[ext_resource type="AudioStream" uid="uid://bqkaf8uf7yygy" path="res://Sounds/SFX/Clique do Mouse.mp3" id="20_5u8fl"]
 [ext_resource type="Texture2D" uid="uid://ehff1ovq414j" path="res://art/cenario/Chuva.png" id="20_gcj7k"]
+[ext_resource type="AudioStream" uid="uid://dslg8o5datrkp" path="res://Sounds/SFX/Pickup.wav" id="21_1wjte"]
+[ext_resource type="Texture2D" uid="uid://cwfw0xenvtre1" path="res://art/itens/posters_1.png" id="21_d5fbh"]
 [ext_resource type="Texture2D" uid="uid://dx5bmkpff285q" path="res://art/cenario/Monstro3.png" id="21_wdsre"]
+[ext_resource type="Texture2D" uid="uid://d4agkej45ks67" path="res://Prototipos/chave.png" id="22_nogxm"]
 [ext_resource type="Texture2D" uid="uid://56imwqv8vxf7" path="res://art/cenario/Vidro.png" id="22_vxcej"]
+[ext_resource type="Texture2D" uid="uid://deelibispwodp" path="res://art/itens/diario_1.png" id="23_1gv8o"]
 [ext_resource type="PackedScene" uid="uid://rkoumkkhqlf8" path="res://timer.tscn" id="24_7awoe"]
+[ext_resource type="Texture2D" uid="uid://cr0s2cqf6r2rp" path="res://art/itens/desenho_2.png" id="24_gy87y"]
+[ext_resource type="Script" path="res://Sword.gd" id="24_sndvh"]
 [ext_resource type="Texture2D" uid="uid://cdidxd5t6of8u" path="res://Prototipos/Filtro Ansiedade (1).png" id="25_2ch56"]
+[ext_resource type="Texture2D" uid="uid://clhqv7iu06k6l" path="res://Prototipos/Armario Senha.png" id="25_y7ah8"]
 [ext_resource type="Texture2D" uid="uid://conhakdu5weta" path="res://art/HUD/SetaBaixo.png" id="26_3qy2u"]
 [ext_resource type="Texture2D" uid="uid://bun3g365e831v" path="res://Prototipos/Filtro Ansiedade 2.png" id="26_tcakv"]
-[ext_resource type="Script" path="res://DialogueSystem.gd" id="27_wiok2"]
 [ext_resource type="AudioStream" uid="uid://bx0eetk0ew3c" path="res://Sounds/Music/Ansiedade(1).mp3" id="28_lykl1"]
 [ext_resource type="AudioStream" uid="uid://byt6nyr5ti2v" path="res://Sounds/Music/Ansiedade(2).mp3" id="29_6hcan"]
 [ext_resource type="AudioStream" uid="uid://dpeuf536t24to" path="res://Sounds/Music/Ansiedade(3).mp3" id="30_2a1j3"]
@@ -42,6 +59,9 @@
 [sub_resource type="LabelSettings" id="LabelSettings_1pu81"]
 font_size = 60
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jdm4f"]
+size = Vector2(77.12, 42.84)
+
 [sub_resource type="LabelSettings" id="LabelSettings_hpiln"]
 font_size = 35
 outline_color = Color(0, 0, 0, 1)
@@ -49,6 +69,9 @@ shadow_color = Color(0, 0, 0, 0.564706)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qofkl"]
 load_path = "res://.godot/imported/Cenario 2a.png-36319cd992e3e7b2ea8ab97d3f9dbf5a.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ek5yo"]
+size = Vector2(192.4, 108)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_lkydj")
@@ -63,17 +86,10 @@ scale = Vector2(1, 1)
 texture = ExtResource("3_gef6a")
 metadata/_edit_lock_ = true
 
-[node name="Pillow" type="Area2D" parent="Bedroom_ang1"]
-visible = false
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/Pillow"]
-polygon = PackedVector2Array(371, 697, 503, 565, 429, 483, 243, 605)
-
 [node name="Bed" type="Area2D" parent="Bedroom_ang1"]
-visible = false
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/Bed"]
-polygon = PackedVector2Array(207, 735, 470, 520, 1157, 654, 1162, 813, 926, 1058, 609, 990, 460, 797)
+[node name="CollisionCama" type="CollisionPolygon2D" parent="Bedroom_ang1/Bed"]
+polygon = PackedVector2Array(207, 735, 270, 584, 418, 471, 508, 539, 562, 559, 593, 532, 661, 552, 1157, 654, 1162, 813, 926, 1058, 609, 990, 460, 797)
 
 [node name="Cobertor" parent="Bedroom_ang1" instance=ExtResource("4_86pwm")]
 position = Vector2(433, 857)
@@ -82,6 +98,7 @@ position = Vector2(433, 857)
 position = Vector2(24, 2)
 
 [node name="Posters" parent="Bedroom_ang1" instance=ExtResource("6_kscdh")]
+position = Vector2(-283, -16)
 
 [node name="Diary" parent="Bedroom_ang1" instance=ExtResource("7_dqhlm")]
 
@@ -108,33 +125,38 @@ offset_bottom = 468.0
 text = "Digite a Senha: "
 label_settings = SubResource("LabelSettings_1pu81")
 
-[node name="Egg" type="Area2D" parent="Bedroom_ang1"]
+[node name="Caixa_abre" type="AudioStreamPlayer2D" parent="Bedroom_ang1/Box"]
+stream = ExtResource("9_4q21c")
+volume_db = 10.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang1/Egg"]
+[node name="Caixa_fecha" type="AudioStreamPlayer" parent="Bedroom_ang1/Box"]
+
+[node name="Egg" type="Area2D" parent="Bedroom_ang1"]
+script = ExtResource("10_iopqv")
+
+[node name="CollisionRichas" type="CollisionPolygon2D" parent="Bedroom_ang1/Egg"]
 polygon = PackedVector2Array(1335, 978, 1613, 1022, 1629, 885, 1614, 724, 1387, 712, 1371, 864)
+
+[node name="Senha" type="Sprite2D" parent="Bedroom_ang1/Egg"]
+visible = false
+position = Vector2(869, 433)
+scale = Vector2(2, 2)
+texture = ExtResource("11_imtfq")
+
+[node name="CollisionSenha" type="CollisionShape2D" parent="Bedroom_ang1/Egg"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(958, 535.5)
+scale = Vector2(25, 25)
+shape = SubResource("RectangleShape2D_jdm4f")
+debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="WindowTextureButton" type="TextureButton" parent="Bedroom_ang1"]
 offset_left = -21.0
 offset_top = 50.0
 offset_right = 89.0
 offset_bottom = 514.0
-
-[node name="RightTextureButton" type="TextureButton" parent="Bedroom_ang1"]
-offset_left = 1800.0
-offset_top = 610.0
-offset_right = 1863.0
-offset_bottom = 723.0
-texture_normal = ExtResource("9_06fkr")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="LeftTextureButton" type="TextureButton" parent="Bedroom_ang1"]
-offset_left = 48.0
-offset_top = 610.0
-offset_right = 155.0
-offset_bottom = 852.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("10_xpy25")
 
 [node name="Ver_janela" type="Label" parent="Bedroom_ang1"]
 visible = false
@@ -155,6 +177,7 @@ metadata/_edit_lock_ = true
 [node name="Drawing" parent="Bedroom_ang2" instance=ExtResource("12_20o7i")]
 
 [node name="Violin" type="Area2D" parent="Bedroom_ang2"]
+script = ExtResource("13_5o3b7")
 
 [node name="Violino2" type="Sprite2D" parent="Bedroom_ang2/Violin"]
 position = Vector2(1570, 536)
@@ -163,113 +186,105 @@ texture = ExtResource("11_3nfh0")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/Violin"]
 polygon = PackedVector2Array(1483, 289, 1433, 679, 1619, 791, 1697, 327)
 
-[node name="Sword" type="Area2D" parent="Bedroom_ang2"]
+[node name="Violino" type="AudioStreamPlayer" parent="Bedroom_ang2/Violin"]
+stream = ExtResource("13_55m56")
+volume_db = 14.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/Sword"]
-polygon = PackedVector2Array(487, 937, 571, 987, 798, 486, 698, 438)
+[node name="Backpack" type="Area2D" parent="Bedroom_ang2"]
+script = ExtResource("15_qcefn")
 
-[node name="OpenBackpack" type="Area2D" parent="Bedroom_ang2"]
+[node name="MochilaAberta" type="Sprite2D" parent="Bedroom_ang2/Backpack"]
 visible = false
-
-[node name="MochilaAberta2" type="Sprite2D" parent="Bedroom_ang2/OpenBackpack"]
 position = Vector2(365, 745)
 texture = ExtResource("12_5ovik")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/OpenBackpack"]
+[node name="CollisionAberto" type="CollisionPolygon2D" parent="Bedroom_ang2/Backpack"]
+visible = false
 polygon = PackedVector2Array(276, 601, 240, 725, 465, 723, 466, 602)
 
-[node name="ClosedBackPack" type="Area2D" parent="Bedroom_ang2"]
-
-[node name="MochilaFechada2" type="Sprite2D" parent="Bedroom_ang2/ClosedBackPack"]
+[node name="MochilaFechada" type="Sprite2D" parent="Bedroom_ang2/Backpack"]
 position = Vector2(363, 808)
 texture = ExtResource("13_kd6yv")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/ClosedBackPack"]
+[node name="CollisionFechado" type="CollisionPolygon2D" parent="Bedroom_ang2/Backpack"]
 polygon = PackedVector2Array(296, 972, 490, 896, 407, 682, 224, 724)
 
-[node name="BG1" type="Area2D" parent="Bedroom_ang2"]
-visible = false
+[node name="Computer" type="Area2D" parent="Bedroom_ang2"]
+script = ExtResource("15_2nvbp")
 
-[node name="TelaFundo12" type="Sprite2D" parent="Bedroom_ang2/BG1"]
-position = Vector2(963, 322)
-texture = ExtResource("14_aedqf")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/BG1"]
-polygon = PackedVector2Array(835, 267, 862, 417, 1085, 368, 1066, 227)
-
-[node name="BG2" type="Area2D" parent="Bedroom_ang2"]
-visible = false
-
-[node name="TelaFundo22" type="Sprite2D" parent="Bedroom_ang2/BG2"]
+[node name="TelaFundo22" type="Sprite2D" parent="Bedroom_ang2/Computer"]
 position = Vector2(961, 323)
 texture = ExtResource("15_3pgly")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/BG2"]
-polygon = PackedVector2Array(835, 267, 862, 417, 1085, 368, 1066, 227)
-
-[node name="BG3" type="Area2D" parent="Bedroom_ang2"]
+[node name="Senha2" type="Sprite2D" parent="Bedroom_ang2/Computer"]
 visible = false
+position = Vector2(962, 323)
+texture = ExtResource("14_aedqf")
 
-[node name="TelaFundo32" type="Sprite2D" parent="Bedroom_ang2/BG3"]
-position = Vector2(964, 324)
+[node name="FundoNovo" type="Sprite2D" parent="Bedroom_ang2/Computer"]
+visible = false
+position = Vector2(962, 324)
 texture = ExtResource("16_ybmkq")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/BG3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/Computer"]
+visible = false
 polygon = PackedVector2Array(835, 267, 862, 417, 1085, 368, 1066, 227)
 
-[node name="Chair" type="Area2D" parent="Bedroom_ang2"]
+[node name="LineEdit" type="LineEdit" parent="Bedroom_ang2/Computer"]
+visible = false
+offset_left = 816.0
+offset_top = 368.0
+offset_right = 1176.0
+offset_bottom = 492.0
+theme_override_font_sizes/font_size = 85
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/Chair"]
-polygon = PackedVector2Array(964, 1093, 1012, 980, 1269, 874, 1373, 894, 1408, 1123)
+[node name="Senha" type="Label" parent="Bedroom_ang2/Computer"]
+visible = false
+offset_left = 378.0
+offset_top = 369.0
+offset_right = 837.0
+offset_bottom = 468.0
+text = "Digite a Senha: "
+label_settings = SubResource("LabelSettings_1pu81")
 
-[node name="Computer" type="Area2D" parent="Bedroom_ang2"]
+[node name="Teclado" type="AudioStreamPlayer2D" parent="Bedroom_ang2/Computer"]
+stream = ExtResource("19_msry4")
+volume_db = 10.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/Computer"]
-polygon = PackedVector2Array(838, 679, 864, 674, 954, 773, 968, 921, 891, 949, 837, 879)
+[node name="Mouse" type="AudioStreamPlayer2D" parent="Bedroom_ang2/Computer"]
+stream = ExtResource("20_5u8fl")
+volume_db = 10.0
 
-[node name="Wires" type="Area2D" parent="Bedroom_ang2"]
+[node name="Pickup" type="AudioStreamPlayer2D" parent="Bedroom_ang2/Computer"]
+stream = ExtResource("21_1wjte")
+volume_db = 10.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/Wires"]
-polygon = PackedVector2Array(1006, 650, 1027, 758, 1201, 718, 1176, 629)
+[node name="Sword" type="Area2D" parent="Bedroom_ang2"]
+position = Vector2(-7, 7)
+script = ExtResource("24_sndvh")
 
-[node name="RightTextureButton" type="TextureButton" parent="Bedroom_ang2"]
-offset_left = 1800.0
-offset_top = 613.0
-offset_right = 1863.0
-offset_bottom = 726.0
-texture_normal = ExtResource("9_06fkr")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="SenhaSword" type="Sprite2D" parent="Bedroom_ang2/Sword"]
+visible = false
+position = Vector2(997, 433)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("25_y7ah8")
 
-[node name="LeftTextureButton" type="TextureButton" parent="Bedroom_ang2"]
-offset_left = 48.0
-offset_top = 610.0
-offset_right = 155.0
-offset_bottom = 852.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("10_xpy25")
+[node name="CollisionSenha" type="CollisionShape2D" parent="Bedroom_ang2/Sword"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(965, 537)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_ek5yo")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="CollisionSword" type="CollisionPolygon2D" parent="Bedroom_ang2/Sword"]
+polygon = PackedVector2Array(487, 937, 571, 987, 798, 486, 698, 438)
 
 [node name="Bedroom_ang3" parent="." instance=ExtResource("1_pel1v")]
 visible = false
 scale = Vector2(1, 1)
 texture = ExtResource("18_mhm14")
-
-[node name="RightTextureButton" type="TextureButton" parent="Bedroom_ang3"]
-offset_left = 1800.0
-offset_top = 613.0
-offset_right = 1863.0
-offset_bottom = 726.0
-texture_normal = ExtResource("9_06fkr")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="LeftTextureButton" type="TextureButton" parent="Bedroom_ang3"]
-offset_left = 48.0
-offset_top = 610.0
-offset_right = 155.0
-offset_bottom = 852.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("10_xpy25")
 
 [node name="Window" parent="." instance=ExtResource("1_pel1v")]
 visible = false
@@ -325,6 +340,74 @@ text = "Sair"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Inventário" type="Node2D" parent="."]
+position = Vector2(115, -91)
+script = ExtResource("19_yyp4v")
+
+[node name="Inventario" type="TextureRect" parent="Inventário"]
+offset_left = 1140.0
+offset_top = -31.0
+offset_right = 1928.0
+offset_bottom = 648.0
+texture = ExtResource("19_ko7r3")
+
+[node name="Poster" type="TextureRect" parent="Inventário/Inventario"]
+visible = false
+layout_mode = 2
+offset_left = 180.0
+offset_top = 126.0
+offset_right = 443.0
+offset_bottom = 403.0
+texture = ExtResource("21_d5fbh")
+expand_mode = 1
+
+[node name="Chave" type="TextureRect" parent="Inventário/Inventario"]
+visible = false
+layout_mode = 2
+offset_left = 439.0
+offset_top = 246.0
+offset_right = 519.0
+offset_bottom = 281.0
+texture = ExtResource("22_nogxm")
+expand_mode = 1
+
+[node name="Diario" type="TextureRect" parent="Inventário/Inventario"]
+visible = false
+layout_mode = 2
+offset_left = 14.0
+offset_top = 143.0
+offset_right = 578.0
+offset_bottom = 638.0
+texture = ExtResource("23_1gv8o")
+expand_mode = 1
+
+[node name="Desenho" type="TextureRect" parent="Inventário/Inventario"]
+visible = false
+layout_mode = 2
+offset_left = 224.0
+offset_top = 124.0
+offset_right = 775.0
+offset_bottom = 653.0
+texture = ExtResource("24_gy87y")
+expand_mode = 1
+
+[node name="RightTextureButton" type="TextureButton" parent="."]
+offset_left = 1800.0
+offset_top = 610.0
+offset_right = 1863.0
+offset_bottom = 723.0
+texture_normal = ExtResource("9_06fkr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LeftTextureButton" type="TextureButton" parent="."]
+offset_left = 48.0
+offset_top = 610.0
+offset_right = 155.0
+offset_bottom = 852.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("10_xpy25")
+
 [node name="Ansiedade_medio" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(960, 540)
@@ -332,6 +415,7 @@ texture = ExtResource("25_2ch56")
 
 [node name="Ansiedade_max" type="Sprite2D" parent="."]
 visible = false
+modulate = Color(1, 1, 1, 0.976471)
 position = Vector2(959, 540)
 texture = ExtResource("26_tcakv")
 
@@ -404,13 +488,18 @@ text = "Texto aqui"
 
 [connection signal="input_event" from="Bedroom_ang1/Box" to="Bedroom_ang1/Box" method="_on_input_event"]
 [connection signal="text_submitted" from="Bedroom_ang1/Box/LineEdit" to="Bedroom_ang1/Box" method="_on_line_edit_text_submitted"]
+[connection signal="input_event" from="Bedroom_ang1/Egg" to="Bedroom_ang1/Egg" method="_on_input_event"]
 [connection signal="mouse_entered" from="Bedroom_ang1/WindowTextureButton" to="." method="_on_window_texture_button_mouse_entered"]
 [connection signal="mouse_exited" from="Bedroom_ang1/WindowTextureButton" to="." method="_on_window_texture_button_mouse_exited"]
 [connection signal="pressed" from="Bedroom_ang1/WindowTextureButton" to="." method="_on_window_texture_button_pressed"]
-[connection signal="pressed" from="Bedroom_ang1/RightTextureButton" to="." method="_on_right_texture_button_pressed"]
-[connection signal="pressed" from="Bedroom_ang1/LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
-[connection signal="pressed" from="Bedroom_ang2/RightTextureButton" to="." method="_on_right_texture_button_pressed"]
-[connection signal="pressed" from="Bedroom_ang2/LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
-[connection signal="pressed" from="Bedroom_ang3/RightTextureButton" to="." method="_on_right_texture_button_pressed"]
-[connection signal="pressed" from="Bedroom_ang3/LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
+[connection signal="input_event" from="Bedroom_ang2/Violin" to="Bedroom_ang2/Violin" method="_on_input_event"]
+[connection signal="finished" from="Bedroom_ang2/Violin/Violino" to="Bedroom_ang2/Violin" method="_on_violino_finished"]
+[connection signal="input_event" from="Bedroom_ang2/Backpack" to="Bedroom_ang2/Backpack" method="_on_input_event"]
+[connection signal="input_event" from="Bedroom_ang2/Computer" to="Bedroom_ang2/Computer" method="_on_input_event"]
+[connection signal="text_submitted" from="Bedroom_ang2/Computer/LineEdit" to="Bedroom_ang2/Computer" method="_on_line_edit_text_submitted"]
+[connection signal="finished" from="Bedroom_ang2/Computer/Teclado" to="Bedroom_ang2/Computer" method="_on_teclado_finished"]
+[connection signal="finished" from="Bedroom_ang2/Computer/Mouse" to="Bedroom_ang2/Computer" method="_on_mouse_finished"]
+[connection signal="input_event" from="Bedroom_ang2/Sword" to="Bedroom_ang2/Sword" method="_on_input_event"]
 [connection signal="pressed" from="Window/SAIR" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="RightTextureButton" to="." method="_on_right_texture_button_pressed"]
+[connection signal="pressed" from="LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
