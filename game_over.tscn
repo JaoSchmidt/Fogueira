@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhs57hw0s81fq"]
+
+[ext_resource type="Script" path="res://game_over.gd" id="1_suh5l"]
+[ext_resource type="Texture2D" uid="uid://cumxjmhq70ukq" path="res://Prototipos/GAME OVER.png" id="1_vff40"]
+[ext_resource type="AudioStream" uid="uid://iyv0kchah8rr" path="res://Sounds/Music/Transição 1.mp3" id="2_ojd8w"]
+[ext_resource type="Texture2D" uid="uid://dx5bmkpff285q" path="res://art/cenario/Monstro3.png" id="3_xjqg3"]
+
+[node name="Game_Over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_suh5l")
+
+[node name="GAME OVER" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_vff40")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(959, 540)
+zoom = Vector2(0.711, 0.711)
+
+[node name="Fim" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ojd8w")
+volume_db = 20.0
+
+[node name="Monster" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.180392)
+self_modulate = Color(1, 1, 1, 0.698039)
+position = Vector2(1020, 665)
+scale = Vector2(0.624479, 0.638889)
+texture = ExtResource("3_xjqg3")
+
+[node name="Tentar Novamente" type="Button" parent="."]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 951.0
+offset_right = 864.0
+offset_bottom = 982.0
+scale = Vector2(3, 3)
+text = "Tentar Novamente"
+icon_alignment = 1
+
+[connection signal="pressed" from="Tentar Novamente" to="." method="_on_tentar_novamente_pressed"]
