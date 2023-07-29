@@ -1,26 +1,26 @@
 extends ColorRect
 
-@export_file var dialogPath = ""
-@export var textSpeed: float = 0.05 
+#@export_file var dialogPath = ""
+#@export var textSpeed: float = 0.05 
  
-var dialog
+#var dialog
 
-var phraseNum = 0
-var finished = false
+#var phraseNum = 0
+#var finished = false
 
-func _ready():
+#func _ready():
 	$Timer.wait_time=textSpeed
 	dialog = getDialog()
 	nextPhrase()
 
-func _process(_delta):
+#func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		if finished:
 			nextPhrase()
 		else:
 			$Text.visible_characters = len($Text.text)
 
-func getDialog() -> Array:
+#func getDialog() -> Array:
 	var file = FileAccess.open(dialogPath, FileAccess.READ)
 	assert(FileAccess.file_exists(dialogPath), "File path does not exist")
 	var json = file.get_as_text()
@@ -31,7 +31,7 @@ func getDialog() -> Array:
 	else:
 		return []
  
-func nextPhrase() -> void:
+#func nextPhrase() -> void:
 	if phraseNum >= len(dialog):
 		queue_free()
 		return
