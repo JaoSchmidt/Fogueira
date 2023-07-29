@@ -119,6 +119,7 @@ func _process(delta):
 		$Ansiedade3.stop()
 		$Chuva.stop()
 		$Ansiedade_max.hide()
+		get_tree().change_scene_to_file("res://game_over.tscn")
 
 
 func showSpecificBackgroundByIndex(index):
