@@ -13,8 +13,15 @@ func remove_item(item_name):
 func isItemSelected(item_name) -> bool:
 	return inventory_map.has(item_name) && inventory_map[item_name].button_pressed
 
+func has_item(item_name) -> bool:
+	return inventory_map.has(item_name)
 # add item to inventory
 func _on_item_clicked(item_object):
+	print("Item added to inventory "+item_object.name)
+	
+	# gambiarra para capa do diário apenas
+	#if item_object.name == "CapaDiario":
+	#	remove_item("ArcoViolino")
 	
 	var texture_button = inventory_button_class.new()
 	texture_button.toggle_mode = true
@@ -24,3 +31,4 @@ func _on_item_clicked(item_object):
 	$GridContainer.add_child(texture_button)
 	
 	inventory_map[str(item_object.name)] = texture_button
+

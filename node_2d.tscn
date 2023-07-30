@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://cgv8wc1ikc084"]
+[gd_scene load_steps=59 format=3 uid="uid://cgv8wc1ikc084"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_lkydj"]
 [ext_resource type="PackedScene" uid="uid://bev73wi0l466q" path="res://angulo_quarto.tscn" id="1_pel1v"]
@@ -35,7 +35,9 @@
 [ext_resource type="Texture2D" uid="uid://56imwqv8vxf7" path="res://art/cenario/Vidro.png" id="22_vxcej"]
 [ext_resource type="PackedScene" uid="uid://rkoumkkhqlf8" path="res://timer.tscn" id="24_7awoe"]
 [ext_resource type="Texture2D" uid="uid://cdidxd5t6of8u" path="res://Prototipos/Filtro Ansiedade (1).png" id="25_2ch56"]
+[ext_resource type="Texture2D" uid="uid://ddgigjwngh08t" path="res://art/itens/Livro.png" id="25_jaou0"]
 [ext_resource type="Texture2D" uid="uid://conhakdu5weta" path="res://art/HUD/SetaBaixo.png" id="26_3qy2u"]
+[ext_resource type="Texture2D" uid="uid://by8v66jvb0r1b" path="res://art/itens/mochilaFrente.png" id="26_s2tqx"]
 [ext_resource type="Texture2D" uid="uid://bun3g365e831v" path="res://Prototipos/Filtro Ansiedade 2.png" id="26_tcakv"]
 [ext_resource type="Script" path="res://DialogueSystem.gd" id="27_wiok2"]
 [ext_resource type="AudioStream" uid="uid://bx0eetk0ew3c" path="res://Sounds/Music/Ansiedade(1).mp3" id="28_lykl1"]
@@ -45,9 +47,11 @@
 [ext_resource type="AudioStream" uid="uid://dpeuf536t24to" path="res://Sounds/Music/Ansiedade(3).mp3" id="30_2a1j3"]
 [ext_resource type="Texture2D" uid="uid://c70nxgylghh2u" path="res://art/itens/PortaAberta_3.png" id="30_uftx3"]
 [ext_resource type="AudioStream" uid="uid://cbre5iaap4g2g" path="res://Sounds/SFX/Porta Abrindo.wav" id="31_a6x6v"]
+[ext_resource type="Texture2D" uid="uid://bha462hydby6q" path="res://art/itens/Capa_3.png" id="31_krtdu"]
 [ext_resource type="AudioStream" uid="uid://bfitm3ojvkp7f" path="res://Sounds/SFX/Chuva.wav" id="32_e7k73"]
 [ext_resource type="AudioStream" uid="uid://dck6mtc4fx1vu" path="res://Sounds/SFX/Campainha.wav" id="33_ud3ab"]
 [ext_resource type="AudioStream" uid="uid://cdjtemhsmtrkn" path="res://Sounds/SFX/Porta fechando.wav" id="34_khc5b"]
+[ext_resource type="PackedScene" uid="uid://deudpl5blu3ws" path="res://generic_item_reciever.tscn" id="34_swxi8"]
 [ext_resource type="AudioStream" uid="uid://bnubnfpahm6s6" path="res://Sounds/SFX/Toque Janela.wav" id="35_rnu6f"]
 [ext_resource type="AudioStream" uid="uid://6p8ybjck1dxg" path="res://Sounds/SFX/Trovao.wav" id="36_10jp4"]
 
@@ -93,6 +97,7 @@ zoom = Vector2(0.711, 0.711)
 metadata/_edit_lock_ = true
 
 [node name="Bedroom_ang1" parent="." instance=ExtResource("1_pel1v")]
+visible = false
 scale = Vector2(1, 1)
 texture = ExtResource("3_gef6a")
 metadata/_edit_lock_ = true
@@ -103,6 +108,8 @@ metadata/_edit_lock_ = true
 polygon = PackedVector2Array(371, 697, 503, 565, 429, 483, 243, 605)
 
 [node name="Diario" parent="Bedroom_ang1" instance=ExtResource("10_vopt1")]
+required_item = "CapaDiario"
+replace_item = "CapaDiario"
 
 [node name="Sprite2D" parent="Bedroom_ang1/Diario" index="0"]
 position = Vector2(874, 793)
@@ -246,7 +253,6 @@ label_settings = SubResource("LabelSettings_hpiln")
 horizontal_alignment = 1
 
 [node name="Bedroom_ang2" parent="." instance=ExtResource("1_pel1v")]
-visible = false
 scale = Vector2(1, 1)
 texture = SubResource("CompressedTexture2D_qofkl")
 metadata/_edit_lock_ = true
@@ -263,11 +269,18 @@ polygon = PackedVector2Array(928, 514, 1121, 460, 1175, 543, 1009, 611, 935, 616
 [node name="Violino" parent="Bedroom_ang2" instance=ExtResource("5_0lnih")]
 
 [node name="CollisionPolygon2D" parent="Bedroom_ang2/Violino" index="0"]
-polygon = PackedVector2Array(1425, 673, 1483, 285, 1688, 331, 1615, 783)
+position = Vector2(12, 3)
+polygon = PackedVector2Array(1425, 673, 1483, 285, 1618, 318, 1550, 749)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bedroom_ang2/Violino"]
 position = Vector2(1555, 552)
 texture = ExtResource("11_3nfh0")
+
+[node name="ArcoViolino" parent="Bedroom_ang2" instance=ExtResource("10_vopt1")]
+
+[node name="CollisionPolygon2D" parent="Bedroom_ang2/ArcoViolino" index="1"]
+position = Vector2(-6, 6)
+polygon = PackedVector2Array(1638, 320, 1698, 345, 1619, 785, 1567, 747)
 
 [node name="Espada" parent="Bedroom_ang2" instance=ExtResource("5_0lnih")]
 
@@ -275,20 +288,41 @@ texture = ExtResource("11_3nfh0")
 polygon = PackedVector2Array(695, 447, 497, 927, 569, 966, 791, 499)
 
 [node name="Mochila" parent="Bedroom_ang2" instance=ExtResource("4_151w1")]
+script = ExtResource("28_w1spj")
+keyItem = ""
+targetItem = "Diario"
 
 [node name="Sprite1" parent="Bedroom_ang2/Mochila" index="0"]
 position = Vector2(366, 796)
 texture = ExtResource("13_kd6yv")
 
 [node name="CollisionPolygon1" parent="Bedroom_ang2/Mochila" index="1"]
-polygon = PackedVector2Array(296, 972, 490, 896, 407, 682, 224, 724)
+polygon = PackedVector2Array(296, 972, 490, 896, 442, 786, 252, 794)
 
 [node name="Sprite2" parent="Bedroom_ang2/Mochila" index="2"]
 position = Vector2(366, 735)
 texture = ExtResource("12_5ovik")
 
+[node name="Livro" parent="Bedroom_ang2/Mochila/Sprite2" index="0" node_paths=PackedStringArray("overlay") instance=ExtResource("10_vopt1")]
+position = Vector2(-366, -735)
+overlay = NodePath("../..")
+
+[node name="Sprite2D" parent="Bedroom_ang2/Mochila/Sprite2/Livro" index="0"]
+position = Vector2(304, 769)
+scale = Vector2(2.35, 1.5)
+texture = ExtResource("25_jaou0")
+
+[node name="CollisionPolygon2D" parent="Bedroom_ang2/Mochila/Sprite2/Livro" index="1"]
+polygon = PackedVector2Array(281, 722, 329, 721, 329, 819, 279, 819)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bedroom_ang2/Mochila/Sprite2" index="1"]
+texture = ExtResource("26_s2tqx")
+
 [node name="CollisionPolygon2" parent="Bedroom_ang2/Mochila" index="3"]
-polygon = PackedVector2Array(276, 601, 240, 725, 465, 723, 466, 602)
+polygon = PackedVector2Array(263, 594, 245, 677, 468, 677, 467, 584)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/Mochila"]
+polygon = PackedVector2Array(348, 690, 348, 791, 436, 788, 436, 686)
 
 [node name="BG1" type="Area2D" parent="Bedroom_ang2"]
 visible = false
@@ -343,11 +377,15 @@ scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("10_xpy25")
 
 [node name="Bedroom_ang3" parent="." instance=ExtResource("1_pel1v")]
+visible = false
+position = Vector2(-25, -4)
 scale = Vector2(1, 1)
 texture = ExtResource("18_mhm14")
 
 [node name="Armario" parent="Bedroom_ang3" instance=ExtResource("4_151w1")]
 script = ExtResource("28_w1spj")
+keyItem = "Chave"
+targetItem = "Posters"
 
 [node name="Sprite1" parent="Bedroom_ang3/Armario" index="0"]
 position = Vector2(249, 436)
@@ -368,6 +406,23 @@ polygon = PackedVector2Array(120, 627, 15, 816, 12, 372, 91, 247)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bedroom_ang3/Armario"]
 position = Vector2(239.125, 333)
 shape = SubResource("RectangleShape2D_cx548")
+
+[node name="CapaDiario" parent="Bedroom_ang3" instance=ExtResource("10_vopt1")]
+required_item = "ArcoViolino"
+replace_item = "ArcoViolino"
+
+[node name="Sprite2D" parent="Bedroom_ang3/CapaDiario" index="0"]
+position = Vector2(317, 162)
+texture = ExtResource("31_krtdu")
+
+[node name="CollisionPolygon2D" parent="Bedroom_ang3/CapaDiario" index="1"]
+polygon = PackedVector2Array(254, 159, 340, 132, 376, 145, 379, 169, 296, 199)
+
+[node name="GenericItemReciever" parent="Bedroom_ang3" instance=ExtResource("34_swxi8")]
+targetItem = "Livro"
+
+[node name="CollisionPolygon2D" parent="Bedroom_ang3/GenericItemReciever" index="0"]
+polygon = PackedVector2Array(953, 371, 956, 518, 1085, 517, 1086, 375)
 
 [node name="RightTextureButton" type="TextureButton" parent="Bedroom_ang3"]
 offset_left = 1800.0
@@ -527,8 +582,11 @@ text = "Texto aqui"
 [connection signal="pressed" from="Bedroom_ang1/RightTextureButton" to="." method="_on_right_texture_button_pressed"]
 [connection signal="pressed" from="Bedroom_ang1/LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
 [connection signal="clicked" from="Bedroom_ang2/Desenho" to="Inventory" method="_on_item_clicked"]
+[connection signal="clicked" from="Bedroom_ang2/ArcoViolino" to="Inventory" method="_on_item_clicked"]
+[connection signal="clicked" from="Bedroom_ang2/Mochila/Sprite2/Livro" to="Inventory" method="_on_item_clicked"]
 [connection signal="pressed" from="Bedroom_ang2/RightTextureButton" to="." method="_on_right_texture_button_pressed"]
 [connection signal="pressed" from="Bedroom_ang2/LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
+[connection signal="clicked" from="Bedroom_ang3/CapaDiario" to="Inventory" method="_on_item_clicked"]
 [connection signal="pressed" from="Bedroom_ang3/RightTextureButton" to="." method="_on_right_texture_button_pressed"]
 [connection signal="pressed" from="Bedroom_ang3/LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
 [connection signal="pressed" from="Window/SAIR" to="." method="_on_sair_pressed"]
@@ -543,6 +601,10 @@ text = "Texto aqui"
 [editable path="Bedroom_ang1/Ovo"]
 [editable path="Bedroom_ang2/Desenho"]
 [editable path="Bedroom_ang2/Violino"]
+[editable path="Bedroom_ang2/ArcoViolino"]
 [editable path="Bedroom_ang2/Espada"]
 [editable path="Bedroom_ang2/Mochila"]
+[editable path="Bedroom_ang2/Mochila/Sprite2/Livro"]
 [editable path="Bedroom_ang3/Armario"]
+[editable path="Bedroom_ang3/CapaDiario"]
+[editable path="Bedroom_ang3/GenericItemReciever"]
