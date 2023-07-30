@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://cgv8wc1ikc084"]
+[gd_scene load_steps=62 format=3 uid="uid://cgv8wc1ikc084"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_lkydj"]
 [ext_resource type="PackedScene" uid="uid://bev73wi0l466q" path="res://angulo_quarto.tscn" id="1_pel1v"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://x7c3mpnkwebl" path="res://art/itens/cortinaFechada_1.png" id="5_wnolm"]
 [ext_resource type="Texture2D" uid="uid://d7b7ge5mimsh" path="res://art/itens/cobertorAberto_1.png" id="6_34pkx"]
 [ext_resource type="Texture2D" uid="uid://hdecqnuqw2uh" path="res://art/itens/cortinaAberta_1.png" id="6_hwa7v"]
-[ext_resource type="Script" path="res://Box.gd" id="8_s7onw"]
+[ext_resource type="Texture2D" uid="uid://bjxqxbmobbfki" path="res://art/itens/TomadaEmTravesseiro.png" id="7_ytknh"]
 [ext_resource type="Texture2D" uid="uid://wrm0xnu7k43r" path="res://art/HUD/SetaDireita2.png" id="9_06fkr"]
 [ext_resource type="PackedScene" uid="uid://bgwlfsse4j75i" path="res://item_collectable.tscn" id="10_vopt1"]
 [ext_resource type="Texture2D" uid="uid://yordj8sw7stc" path="res://art/HUD/SetaEsquerda2.png" id="10_xpy25"]
@@ -28,9 +28,11 @@
 [ext_resource type="Texture2D" uid="uid://3dm27gm8hjos" path="res://art/itens/telaFundo3_2.png" id="16_ybmkq"]
 [ext_resource type="Texture2D" uid="uid://sa05xbeo7osy" path="res://art/cenario/Monstro1.png" id="18_fqeoo"]
 [ext_resource type="Texture2D" uid="uid://nir67cw82uyt" path="res://art/cenario/Cenario 3.png" id="18_mhm14"]
+[ext_resource type="Script" path="res://PasswordBox.gd" id="18_r0cah"]
 [ext_resource type="Texture2D" uid="uid://cr0s2cqf6r2rp" path="res://art/itens/desenho_2.png" id="19_x8dbj"]
 [ext_resource type="Texture2D" uid="uid://kb7w0ad1xwuy" path="res://art/cenario/Monstro2.png" id="19_xtuet"]
 [ext_resource type="Texture2D" uid="uid://ehff1ovq414j" path="res://art/cenario/Chuva.png" id="20_gcj7k"]
+[ext_resource type="Texture2D" uid="uid://cql5f5uehs64i" path="res://art/itens/Foto.png" id="20_wv5cl"]
 [ext_resource type="Texture2D" uid="uid://dx5bmkpff285q" path="res://art/cenario/Monstro3.png" id="21_wdsre"]
 [ext_resource type="Texture2D" uid="uid://56imwqv8vxf7" path="res://art/cenario/Vidro.png" id="22_vxcej"]
 [ext_resource type="PackedScene" uid="uid://rkoumkkhqlf8" path="res://timer.tscn" id="24_7awoe"]
@@ -45,6 +47,7 @@
 [ext_resource type="AudioStream" uid="uid://byt6nyr5ti2v" path="res://Sounds/Music/Ansiedade(2).mp3" id="29_6hcan"]
 [ext_resource type="Texture2D" uid="uid://b40eb2vk3d4hg" path="res://art/itens/PortaFechada_3.png" id="29_n2ghj"]
 [ext_resource type="AudioStream" uid="uid://dpeuf536t24to" path="res://Sounds/Music/Ansiedade(3).mp3" id="30_2a1j3"]
+[ext_resource type="Script" path="res://Computer.gd" id="30_mog23"]
 [ext_resource type="Texture2D" uid="uid://c70nxgylghh2u" path="res://art/itens/PortaAberta_3.png" id="30_uftx3"]
 [ext_resource type="AudioStream" uid="uid://cbre5iaap4g2g" path="res://Sounds/SFX/Porta Abrindo.wav" id="31_a6x6v"]
 [ext_resource type="Texture2D" uid="uid://bha462hydby6q" path="res://art/itens/Capa_3.png" id="31_krtdu"]
@@ -102,10 +105,15 @@ scale = Vector2(1, 1)
 texture = ExtResource("3_gef6a")
 metadata/_edit_lock_ = true
 
-[node name="Pillow" parent="Bedroom_ang1" instance=ExtResource("5_0lnih")]
+[node name="Tomada" parent="Bedroom_ang1" instance=ExtResource("10_vopt1")]
 
-[node name="CollisionPolygon2D" parent="Bedroom_ang1/Pillow" index="0"]
-polygon = PackedVector2Array(371, 697, 503, 565, 429, 483, 243, 605)
+[node name="Sprite2D" parent="Bedroom_ang1/Tomada" index="0"]
+position = Vector2(282, 687)
+scale = Vector2(0.0685185, 0.0979168)
+texture = ExtResource("7_ytknh")
+
+[node name="CollisionPolygon2D" parent="Bedroom_ang1/Tomada" index="1"]
+polygon = PackedVector2Array(248, 636, 318, 635, 316, 737, 248, 734)
 
 [node name="Diario" parent="Bedroom_ang1" instance=ExtResource("10_vopt1")]
 required_item = "CapaDiario"
@@ -121,7 +129,7 @@ polygon = PackedVector2Array(816, 721, 881, 711, 908, 803, 846, 815)
 [node name="Bed" parent="Bedroom_ang1" instance=ExtResource("5_0lnih")]
 
 [node name="CollisionPolygon2D" parent="Bedroom_ang1/Bed" index="0"]
-polygon = PackedVector2Array(207, 735, 470, 520, 1157, 654, 1162, 813, 926, 1058, 609, 990, 460, 797)
+polygon = PackedVector2Array(307, 757, 534, 537, 1157, 654, 1162, 813, 927, 1059, 850, 819, 911, 807, 891, 698, 806, 709, 926, 1058, 609, 990, 460, 797)
 
 [node name="Chave" parent="Bedroom_ang1" node_paths=PackedStringArray("overlay") instance=ExtResource("10_vopt1")]
 overlay = NodePath("../Cortina")
@@ -192,28 +200,52 @@ polygon = PackedVector2Array(-19, -115, 32, 118, 272, 118, 206, -126)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Bedroom_ang1/Posters"]
 stream = ExtResource("14_rxkfj")
 
-[node name="Box" type="Area2D" parent="Bedroom_ang1"]
-script = ExtResource("8_s7onw")
+[node name="Box2" parent="Bedroom_ang1" node_paths=PackedStringArray("overlay") instance=ExtResource("4_151w1")]
+script = ExtResource("18_r0cah")
+password = "dad"
+keyItem = ""
+targetItem = ""
+overlay = NodePath("../Cobertor")
 
-[node name="CollisionBox" type="CollisionPolygon2D" parent="Bedroom_ang1/Box"]
-polygon = PackedVector2Array(351, 936, 349, 963, 428, 999, 443, 983, 423, 955)
-
-[node name="LineEdit" type="LineEdit" parent="Bedroom_ang1/Box"]
-visible = false
-offset_left = 816.0
-offset_top = 368.0
-offset_right = 1176.0
-offset_bottom = 492.0
+[node name="LineEdit" type="LineEdit" parent="Bedroom_ang1/Box2"]
+offset_left = 823.0
+offset_top = 371.0
+offset_right = 1183.0
+offset_bottom = 495.0
 theme_override_font_sizes/font_size = 85
 
-[node name="Senha" type="Label" parent="Bedroom_ang1/Box"]
-visible = false
-offset_left = 378.0
-offset_top = 369.0
-offset_right = 837.0
-offset_bottom = 468.0
+[node name="Senha" type="Label" parent="Bedroom_ang1/Box2"]
+offset_left = 367.0
+offset_top = 379.0
+offset_right = 826.0
+offset_bottom = 478.0
 text = "Digite a Senha: "
 label_settings = SubResource("LabelSettings_1pu81")
+
+[node name="CollisionPolygon1" parent="Bedroom_ang1/Box2" index="3"]
+polygon = PackedVector2Array(350, 966, 351, 936, 442, 962, 451, 978, 431, 997)
+
+[node name="DesenhoReceptor" parent="Bedroom_ang1/Box2/Sprite2" index="0" node_paths=PackedStringArray("overlay") instance=ExtResource("34_swxi8")]
+overlay = NodePath("../..")
+
+[node name="CollisionPolygon2D" parent="Bedroom_ang1/Box2/Sprite2/DesenhoReceptor" index="0"]
+polygon = PackedVector2Array(353, 988, 403, 1001, 375, 1038, 328, 1023)
+
+[node name="Foto" parent="Bedroom_ang1/Box2/Sprite2" index="1" instance=ExtResource("10_vopt1")]
+
+[node name="Sprite2D" parent="Bedroom_ang1/Box2/Sprite2/Foto" index="0"]
+position = Vector2(366, 1011)
+rotation = 0.532325
+scale = Vector2(0.636909, 0.649793)
+texture = ExtResource("20_wv5cl")
+
+[node name="CollisionPolygon2D" parent="Bedroom_ang1/Box2/Sprite2/Foto" index="1"]
+position = Vector2(-1, 1)
+polygon = PackedVector2Array(359, 984, 337, 1018, 372, 1035, 401, 999)
+
+[node name="CollisionPolygon2" parent="Bedroom_ang1/Box2" index="5"]
+position = Vector2(-4, -1)
+polygon = PackedVector2Array(299, 1025, 326, 1029, 361, 985, 407, 998, 379, 1044, 404, 1055, 444, 1002, 445, 975, 345, 954)
 
 [node name="Ovo" parent="Bedroom_ang1" instance=ExtResource("5_0lnih")]
 
@@ -324,40 +356,45 @@ polygon = PackedVector2Array(263, 594, 245, 677, 468, 677, 467, 584)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/Mochila"]
 polygon = PackedVector2Array(348, 690, 348, 791, 436, 788, 436, 686)
 
-[node name="BG1" type="Area2D" parent="Bedroom_ang2"]
-visible = false
+[node name="Computador" type="Area2D" parent="Bedroom_ang2"]
+z_index = 1
+script = ExtResource("30_mog23")
+required_item = "Tomada"
+password = "arte"
 
-[node name="TelaFundo12" type="Sprite2D" parent="Bedroom_ang2/BG1"]
+[node name="LineEdit" type="LineEdit" parent="Bedroom_ang2/Computador"]
+visible = false
+offset_left = 911.0
+offset_top = 577.0
+offset_right = 1271.0
+offset_bottom = 701.0
+theme_override_font_sizes/font_size = 85
+
+[node name="Senha" type="Label" parent="Bedroom_ang2/Computador"]
+offset_left = 427.0
+offset_top = 594.0
+offset_right = 886.0
+offset_bottom = 693.0
+text = "Digite a Senha: "
+label_settings = SubResource("LabelSettings_1pu81")
+
+[node name="TelaFundo12" type="Sprite2D" parent="Bedroom_ang2/Computador"]
 position = Vector2(963, 322)
 texture = ExtResource("14_aedqf")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/BG1"]
-polygon = PackedVector2Array(835, 267, 862, 417, 1085, 368, 1066, 227)
-
-[node name="BG2" type="Area2D" parent="Bedroom_ang2"]
-visible = false
-
-[node name="TelaFundo22" type="Sprite2D" parent="Bedroom_ang2/BG2"]
+[node name="TelaFundo22" type="Sprite2D" parent="Bedroom_ang2/Computador"]
 position = Vector2(961, 323)
 texture = ExtResource("15_3pgly")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/BG2"]
-polygon = PackedVector2Array(835, 267, 862, 417, 1085, 368, 1066, 227)
-
-[node name="BG3" type="Area2D" parent="Bedroom_ang2"]
-visible = false
-
-[node name="TelaFundo32" type="Sprite2D" parent="Bedroom_ang2/BG3"]
+[node name="TelaFundo32" type="Sprite2D" parent="Bedroom_ang2/Computador"]
 position = Vector2(964, 324)
 texture = ExtResource("16_ybmkq")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/BG3"]
-polygon = PackedVector2Array(835, 267, 862, 417, 1085, 368, 1066, 227)
-
-[node name="Computer" type="Area2D" parent="Bedroom_ang2"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bedroom_ang2/Computer"]
+[node name="CollisionDesktop" type="CollisionPolygon2D" parent="Bedroom_ang2/Computador"]
 polygon = PackedVector2Array(838, 679, 864, 674, 954, 773, 968, 921, 891, 949, 837, 879)
+
+[node name="CollisionMonitor" type="CollisionPolygon2D" parent="Bedroom_ang2/Computador"]
+polygon = PackedVector2Array(839, 274, 1067, 225, 1084, 365, 870, 416)
 
 [node name="RightTextureButton" type="TextureButton" parent="Bedroom_ang2"]
 offset_left = 1800.0
@@ -571,11 +608,12 @@ text = "Texto aqui"
 
 [node name="Timer" type="Timer" parent="ColorRect"]
 
+[connection signal="clicked" from="Bedroom_ang1/Tomada" to="Inventory" method="_on_item_clicked"]
 [connection signal="clicked" from="Bedroom_ang1/Diario" to="Inventory" method="_on_item_clicked"]
 [connection signal="clicked" from="Bedroom_ang1/Chave" to="Inventory" method="_on_item_clicked"]
 [connection signal="clicked" from="Bedroom_ang1/Posters" to="Inventory" method="_on_item_clicked"]
-[connection signal="input_event" from="Bedroom_ang1/Box" to="Bedroom_ang1/Box" method="_on_input_event"]
-[connection signal="text_submitted" from="Bedroom_ang1/Box/LineEdit" to="Bedroom_ang1/Box" method="_on_line_edit_text_submitted"]
+[connection signal="text_submitted" from="Bedroom_ang1/Box2/LineEdit" to="Bedroom_ang1/Box2" method="_on_line_edit_text_submitted"]
+[connection signal="clicked" from="Bedroom_ang1/Box2/Sprite2/Foto" to="Inventory" method="_on_item_clicked"]
 [connection signal="mouse_entered" from="Bedroom_ang1/WindowTextureButton" to="." method="_on_window_texture_button_mouse_entered"]
 [connection signal="mouse_exited" from="Bedroom_ang1/WindowTextureButton" to="." method="_on_window_texture_button_mouse_exited"]
 [connection signal="pressed" from="Bedroom_ang1/WindowTextureButton" to="." method="_on_window_texture_button_pressed"]
@@ -584,6 +622,8 @@ text = "Texto aqui"
 [connection signal="clicked" from="Bedroom_ang2/Desenho" to="Inventory" method="_on_item_clicked"]
 [connection signal="clicked" from="Bedroom_ang2/ArcoViolino" to="Inventory" method="_on_item_clicked"]
 [connection signal="clicked" from="Bedroom_ang2/Mochila/Sprite2/Livro" to="Inventory" method="_on_item_clicked"]
+[connection signal="input_event" from="Bedroom_ang2/Computador" to="Bedroom_ang2/Computador" method="_on_input_event"]
+[connection signal="text_submitted" from="Bedroom_ang2/Computador/LineEdit" to="Bedroom_ang2/Computador" method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="Bedroom_ang2/RightTextureButton" to="." method="_on_right_texture_button_pressed"]
 [connection signal="pressed" from="Bedroom_ang2/LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
 [connection signal="clicked" from="Bedroom_ang3/CapaDiario" to="Inventory" method="_on_item_clicked"]
@@ -591,13 +631,16 @@ text = "Texto aqui"
 [connection signal="pressed" from="Bedroom_ang3/LeftTextureButton" to="." method="_on_left_texture_button_pressed"]
 [connection signal="pressed" from="Window/SAIR" to="." method="_on_sair_pressed"]
 
-[editable path="Bedroom_ang1/Pillow"]
+[editable path="Bedroom_ang1/Tomada"]
 [editable path="Bedroom_ang1/Diario"]
 [editable path="Bedroom_ang1/Bed"]
 [editable path="Bedroom_ang1/Chave"]
 [editable path="Bedroom_ang1/Cortina"]
 [editable path="Bedroom_ang1/Cobertor"]
 [editable path="Bedroom_ang1/Posters"]
+[editable path="Bedroom_ang1/Box2"]
+[editable path="Bedroom_ang1/Box2/Sprite2/DesenhoReceptor"]
+[editable path="Bedroom_ang1/Box2/Sprite2/Foto"]
 [editable path="Bedroom_ang1/Ovo"]
 [editable path="Bedroom_ang2/Desenho"]
 [editable path="Bedroom_ang2/Violino"]

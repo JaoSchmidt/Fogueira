@@ -6,7 +6,6 @@ const inventory_button_class = preload("res://InventoryButton.gd")
 func remove_item(item_name):
 	print(item_name)
 	if(inventory_map.has(item_name)):
-		
 		$GridContainer.remove_child(inventory_map[item_name])
 		inventory_map.erase(item_name)
 
@@ -15,14 +14,11 @@ func isItemSelected(item_name) -> bool:
 
 func has_item(item_name) -> bool:
 	return inventory_map.has(item_name)
+	
 # add item to inventory
 func _on_item_clicked(item_object):
 	print("Item added to inventory "+item_object.name)
-	
-	# gambiarra para capa do diário apenas
-	#if item_object.name == "CapaDiario":
-	#	remove_item("ArcoViolino")
-	
+
 	var texture_button = inventory_button_class.new()
 	texture_button.toggle_mode = true
 	texture_button.item = item_object
